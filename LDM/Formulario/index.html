@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios</title>
+    <link rel="stylesheet" href="/Formulario/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Formulario de registro</h1>
+    </header>
+    <main>
+      <form action="" class="formulario">
+
+        <section class="">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" required placeholder="Nombre"/>
+          <label for="apellidos">Apellidos</label>
+          <input type="text" name="apellidos" id="apellidos" required placeholder="Apellidos"/>
+          <label for="edad">Edad</label>
+          <input type="number" name="edad" id="edad" min="0" max="110" required placeholder="Edad" />
+          <label for="fecha">Fecha</label>
+          <input type="date" name="fecha" id="fecha" required/>
+        </section>
+
+        <section class="">
+          <label for="color_fav">Color favorito</label>
+          <input type="color" name="" id="color_fav" required/>
+        </section>
+
+        <section class="">
+          <label for="sobreTi">Escribe algo sobre ti</label>
+          <textarea name="" id="sobreTi" placeholder="Escribr aqui..."></textarea required>
+        </section>
+
+        <section class="">
+          <label for="provincia">Selecciona tu provincia</label>
+          <select name="" id="provincia" aria-placeholder="Selecciona" required>
+            <option value="" disabled>Opciones</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Cádiz">Cádiz</option>
+            <option value="Huelva">Huelva</option>
+            <option value="Jaén">Jaén</option>
+            <option value="Córdoba">Córdoba</option>
+          </select>
+        </section>
+
+        <section class="">
+          <label for="movil">Introduce tu número de teléfono</label>
+          <input type="tel" name="" id="movil" min="12" max="12" required placeholder="+34"/>
+        </section>
+
+        <section class="">
+          <label for="mes-favorito">Selecciona tu mes favorito:</label>
+          <select id="mes-favorito" name="mes-favorito" required>
+            <option value="enero">Enero</option>
+            <option value="febrero">Febrero</option>
+            <option value="marzo">Marzo</option>
+            <option value="abril">Abril</option>
+            <option value="mayo">Mayo</option>
+            <option value="junio">Junio</option>
+            <option value="julio">Julio</option>
+            <option value="agosto">Agosto</option>
+            <option value="septiembre">Septiembre</option>
+            <option value="octubre">Octubre</option>
+            <option value="noviembre">Noviembre</option>
+            <option value="diciembre">Diciembre</option>
+          </select>
+        </section>
+        
+        <section class="sex">
+          <label for="sex">Selecciona el sexo</label><br />
+          <label for="masculino">Masculino</label>
+          <input type="radio" name="sexo" id="masculino" value="masculino" required/>
+          <label for="femenino">Femenino</label>
+          <input type="radio" name="sexo" id="femenino" value="femenino" required/>
+        </section>
+
+        <section class="">
+          <label for="email">Introduce tu correo electrónico</label>
+          <input type="email" id="email" required placeholder="outlook, gmail, etc..."/>
+        </section>
+        
+        <section class="">
+          <label for="img">Sube una imagen</label>
+          <input type="file" name="" id="img" accept="image/*" required/>
+        </section>
+
+        <section class="">
+          <label for="progreso">Progreso actual</label>
+          <progress id="progreso" value="50" max="100"></progress>
+        </section>
+
+        <section class="">
+        <label for="comidaFav">Seleccione sus comidas favoritas</label>
+        <label for="pizza">
+          <input type="checkbox" id="pizza" value="pizza" required/>Pizza
+        </label>
+        <label for="Hamburguesa">
+          <input type="checkbox" id="Hamburguesa" value="Hamburguesa" required/>Hamburguesa
+        </label>
+        <label for="Hotdog">
+          <input type="checkbox" id="Hotdog" value="Hotdog" required/>Hotdog
+        </label>
+        </section>
+
+       <section class=""> 
+        <label for="hobbies">Selecciona tus hobbies</label>
+        <select name="hobbies" id="hobbies" multiple size="4" required>
+          <option value="Leer">Leer</option>
+          <option value="Surf">Surf</option>
+          <option value="Viajar">Viajar</option>
+          <option value="Pasear">Pasear</option>
+        </select>
+      </section>
+
+      <section class="botones">
+    <button type="submit" class="btn">Enviar</button>
+    <button type="reset" class="btn">Resetear</button>
+      </section>
+
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>

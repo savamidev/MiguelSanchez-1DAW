@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+}
+
+h1 {
+    padding: 100px 0px 50px 0px;
+}
+
+.contenedor {
+    background: linear-gradient(#8be1ec, #ffffff);
+    text-align: center;    
+    align-items: center;
+}
+
+.caja {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 15px 1px 15px 1px;
+    border-radius: 10px;
+    color: #ffffff;
+    align-content: center;
+}
+
+.caja1 {
+    background-color: #ee2e30;
+}
+
+.caja2 {
+    background-color: #5db67a;
+}
+
+.caja3 {
+    background: linear-gradient(to right, #ebb579, #ff5620);
+}
+
+.caja4 {
+    background: radial-gradient(circle, #0151a4 5%, #9ae5ed 65%);
+}
+
+.caja5 {
+    background: linear-gradient(to left,#52feb2, #07d9ee, #011dff);
+}
+
+.caja6 {
+    background: linear-gradient(to top left, #338de9, #e13f97);
+}
+
+.caja7 {
+    background: radial-gradient(#fffcfc, #ebc46b, #6acced);
+}
+
+.caja8 {
+    background: radial-gradient(at 0% 100%, #f76e30, #fffa74, #47a3d2);
+}
+
+.caja9 {
+    background: repeating-conic-gradient(from 60deg at 20% 10%, #003f5b, #494280, #843b94, #bb358e, #e84671, #ff7840, #ff7453, #ff4baa, #cd63e6, #7190eb, #00acba, #08a878);
+}

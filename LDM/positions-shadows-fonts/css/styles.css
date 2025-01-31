@@ -1,0 +1,95 @@
+/* Importando una fuente personalizada de Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+body{
+  background-image: linear-gradient(to bottom right, #2d3e51, #5aa6dd);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /*NO TOCAR*/
+}
+
+
+.card {
+  line-height: 35px;
+  }
+  
+  .card-background {
+    
+  }
+  
+  .card-content {
+    color: aliceblue;
+    background-image: linear-gradient(to right, #d72294, #39e1ee);
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    padding: 20px 10px 0px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #262a2f34;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px #262a2f39;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-btn {
+    display: relative;
+    background-color: rgba(240, 248, 255, 0.186);
+    border-radius: 50px;
+    border: 2px solid aliceblue;
+    padding: 0.9em;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+  
+  .contact-btn:hover {
+    font-size: 0.85rem;
+    background-image: linear-gradient(to left, #d722953a, #39e2ee41);
+    box-shadow: 5px 5px 5px #262a2f48;
+    transition: 0.1s;
+  }
+  
+  
+
+.floating-element {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffeb3b, #ff5722);
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 10;
+  margin: 10px;
+  animation: move 3s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
