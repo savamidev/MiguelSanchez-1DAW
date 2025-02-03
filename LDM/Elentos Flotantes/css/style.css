@@ -4,6 +4,7 @@
 
 html {
   font-family: sans-serif;
+  display: inline-block;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 img {
-  width: 260px;
+  width: 30%;
   height: auto;
   border-radius: 20px;
 }
@@ -35,6 +36,7 @@ footer {
 .titulo {
   font-size: 48px;
   font-weight: bold;
+  margin-bottom: 70px;
   background: linear-gradient(to right, #fc8282, #4b6be2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -42,6 +44,8 @@ footer {
 
 .contenedor {
   margin-top: 80px;
+  margin: auto;
+  max-width: 800px;
   padding: 15px 10px 10px;
   border: 10px solid;
   border-image: linear-gradient(45deg, #fa7fa4, #e7bb9e, #25fbff) 1;
