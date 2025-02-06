@@ -5,7 +5,7 @@
             -int modificador
 
             +Contador()
-            +Contador(modificador) int 
+            +Contador(modificador: int) int 
             +Contador(valor: int, modificador: int)
             +getIncremento() int
             +incrementarCuenta() void
