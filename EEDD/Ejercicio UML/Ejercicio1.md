@@ -11,8 +11,7 @@
     }
     
     class Instituto {
-
-        
+  
     }
 
     class  ActoresEducativos{
@@ -23,8 +22,8 @@
     }
 
     class  Docente{
-       <<abstract>>
        #Double sueldoBruto
+       #Tutor 
     }
 
     
@@ -39,10 +38,6 @@
     }
 
     
-    class  Profesor{
-    }
-
-    
     class  Alumno{
         -String teléfonoContac
     }
@@ -54,8 +49,6 @@
     ActoresEducativos <|-- Docente
     ActoresEducativos <|-- Alumno
     Docente <|-- Tutor
-    Docente <|-- Profesor
     Tutor "1" -- "1" EquipoProfesor : tiene
-    
     
 ```

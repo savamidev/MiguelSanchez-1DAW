@@ -26,5 +26,3 @@
     Pelicula "*" -- "1" Genero : pertenece
 
 ```
-
- Sobre las personas que participan en la película es necesario conocer el nombre, los apellidos, la fecha de nacimiento y nacionalidad.
