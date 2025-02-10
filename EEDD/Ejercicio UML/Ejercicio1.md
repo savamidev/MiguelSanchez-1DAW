@@ -35,6 +35,7 @@
     
     class  EquipoProfesor{
     -List Profesor profesores
+    -addProfesor(nombreProfesor : Profesor) : void
     }
 
     
@@ -54,7 +55,7 @@
     ActoresEducativos <|-- Alumno
     Docente <|-- Tutor
     Docente <|-- Profesor
-    Tutor "1" -- "1" EquipoProfesor
-    Profesor "*" -- "1" EquipoProfesor
+    Tutor "1" -- "1" EquipoProfesor : tiene
+    
     
 ```
