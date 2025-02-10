@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  font-family:san sans-serif;
+}
+
+body {
+  background-image: url(/LDM/Capitan-Veneno/img/bg.png);
+  display: grid;
+  grid-template-columns: 1fr 30%;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+header {
+  background-color: #ffffff;
+  grid-area: header;
+}
+
+h1 {
+  margin: 30px 0px 20px;
+}
+
+h3 {
+  margin: 15px 0px 30px;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  color: #ffff;
+  font-size: 0.8rem;
+  display: inline;
+  margin: 0px 10px 0px;
+}
+
+main {
+  grid-area: main;
+}
+
+p {
+    margin: 0px ;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px 0px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+img {
+  height: 160px;
+  width: 250px;
+  margin: 0px 0px 5px;
+}
+
+.contenedor {
+  background-color: #ffff;
+  margin: 20px;
+  padding: 30px;
+  text-align: justify;
+}
+
+.cabecera {
+  text-align: center;
+}
