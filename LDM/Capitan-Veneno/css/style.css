@@ -1,6 +1,6 @@
 * {
   margin: 0px;
-  font-family:san sans-serif;
+  font-family: san sans-serif;
 }
 
 body {
@@ -19,11 +19,20 @@ header {
 }
 
 h1 {
-  margin: 30px 0px 20px;
+  margin: 50px 0px 20px;
+}
+
+h2 {
+  margin: 10px 0px 25px;
+}
+
+main h2 {
+  font-size: 2rem;
 }
 
 h3 {
-  margin: 15px 0px 30px;
+  font-size: 1.6rem;
+  margin: 20px 0px 30px;
 }
 
 nav {
@@ -37,9 +46,9 @@ ul {
 
 li {
   color: #ffff;
-  font-size: 0.8rem;
+  font-size: 1rem;
   display: inline;
-  margin: 0px 10px 0px;
+  margin: 0px 25px 0px;
 }
 
 main {
@@ -47,7 +56,22 @@ main {
 }
 
 p {
-    margin: 0px ;
+    font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+figure {
+  float: right;
+}
+
+figure img {
+  height: auto;
+  padding: 20px 0px 0px 50px;
+}
+
+figcaption {
+    font-size: 1rem;
+    text-align: right;
 }
 
 aside {
@@ -62,17 +86,23 @@ footer {
 }
 
 img {
-  height: 160px;
+  height: 180px;
   width: 250px;
-  margin: 0px 0px 5px;
+  margin-bottom: 5px;
 }
 
 .contenedor {
   background-color: #ffff;
-  margin: 20px;
+  margin: 20px 30px 0px;
   padding: 30px;
   text-align: justify;
 }
+
+.contenido-img {
+border-bottom:1px solid black;
+border-top: 1px solid black;
+}
+
 
 .cabecera {
   text-align: center;
