@@ -11,15 +11,13 @@
 }
 
 body {
-    background-color: var(--bg-negro);
-
+  background-color: var(--bg-negro);
 }
 
 h1 {
   font-size: 5rem;
+  padding-top: 50px;
   text-align: center;
-  margin: 65px;
- 
 }
 
 p {
@@ -29,9 +27,7 @@ p {
 }
 
 #contenedor {
-  margin: auto;
   display: grid;
-  height: 100%;
   grid-template-columns: 1fr;
   grid-template-areas:
     "rojo1"
@@ -42,7 +38,6 @@ p {
     "blanco"
     "azul2"
     "amarillo2";
-    gap: 5px;
 }
 
 #bauhaus {
@@ -97,31 +92,28 @@ p {
 }
 
 @media (min-width: 728px) {
-  
   #contenedor {
-    margin: auto;
     display: grid;
-    height: 90%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-    "azul1 azul1 azul1"
-    "bauhaus bauhaus bauhaus"
-    "blanco azul2 amarillo1"
-    "rojo1 rojo2 rojo2"
-    "amarillo2 rojo2 rojo2";
-  
-    gap: 5px;
-
-  } 
+      "azul1 azul1 azul1"
+      "bauhaus bauhaus bauhaus"
+      "blanco azul2 amarillo1"
+      "rojo1 rojo2 rojo2"
+      "amarillo2 rojo2 rojo2";
+    gap: 3px;
+  }
 
   #rojo1 {
     grid-area: rojo1;
+    margin-top: 20px;
     background-color: var(--bg-rojo);
-    height: calc(var(--ancho) * 2) ;
+    height: calc(var(--ancho) * 2);
   }
-  
+
   #rojo2 {
     grid-area: rojo2;
+    margin-top: 20px;
     background-color: var(--bg-rojo);
     height: calc(var(--ancho) * 8.2);
   }
@@ -140,34 +132,33 @@ p {
   p {
     text-align: right;
   }
-
 }
 
 @media (min-width: 1024px) {
   #contenedor {
-    margin: auto;
+
     display: grid;
-    height: 90%;
+
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas:
-   "rojo1 rojo2 rojo2 azul1 azul1 azul1"
-   "rojo1 rojo2 rojo2 bauhaus bauhaus bauhaus" 
-   "amarillo2 rojo2 rojo2 bauhaus bauhaus bauhaus"
-   "amarillo2 rojo2 rojo2 bauhaus bauhaus bauhaus"
-   "amarillo2 rojo2 rojo2 blanco azul2 amarillo1"
-  ;
+      "rojo1 rojo2 rojo2 azul1 azul1 azul1"
+      "rojo1 rojo2 rojo2 bauhaus bauhaus bauhaus"
+      "amarillo2 rojo2 rojo2 bauhaus bauhaus bauhaus"
+      "amarillo2 rojo2 rojo2 bauhaus bauhaus bauhaus"
+      "amarillo2 rojo2 rojo2 blanco azul2 amarillo1";
     gap: 5px;
-
-  } 
+  }
 
   #rojo1 {
     grid-area: rojo1;
+    margin: 5px;
     background-color: var(--bg-rojo);
-    height: calc(var(--ancho) * 2) ;
+    height: calc(var(--ancho) * 2);
   }
-  
+
   #rojo2 {
     grid-area: rojo2;
+    margin: 5px 15px 0px 5px;
     background-color: var(--bg-rojo);
     height: calc(var(--ancho) * 10.3);
   }
