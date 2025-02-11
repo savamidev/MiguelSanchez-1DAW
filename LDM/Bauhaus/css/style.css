@@ -126,7 +126,7 @@ p {
 
   h1 {
     text-align: right;
-    margin-bottom: 200px;
+    margin: 40px 20px 170px 0px;
   }
 
   p {
@@ -151,14 +151,14 @@ p {
 
   #rojo1 {
     grid-area: rojo1;
-    margin: 5px;
+    margin-top: 7px;
     background-color: var(--bg-rojo);
     height: calc(var(--ancho) * 2);
   }
 
   #rojo2 {
     grid-area: rojo2;
-    margin: 5px 15px 0px 5px;
+    margin: 7px 20px 0px 5px;
     background-color: var(--bg-rojo);
     height: calc(var(--ancho) * 10.3);
   }
@@ -166,11 +166,11 @@ p {
   #amarillo2 {
     grid-area: amarillo2;
     background-color: var(--bg-amarillo);
-    height: calc(var(--ancho) * 8.1);
+    height: calc(var(--ancho) * 8.07);
   }
 
   h1 {
     text-align: right;
-    margin-bottom: 150px;
+    margin: 0px 15px 150px;
   }
 }
