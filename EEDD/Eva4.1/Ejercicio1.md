@@ -2,16 +2,19 @@
     classDiagram
 
 
-    class empresaPoseedora {
+    class EmpresaPoseedora {
     }
     
 
-    class asesor {
+    class Asesor {
     }
 
-    class vendedor {
+    class Vendedor {
 
     }
 
+    EmpresaPoseedora "1" -- "0..n" Vendedor : tiene
+    Vendedor -- Vendedor : capta
+   
 
 ```
