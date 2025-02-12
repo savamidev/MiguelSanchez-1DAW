@@ -32,6 +32,7 @@
     -Integer codiAsesor
     -String nombre
     -String titulo
+    -String fechaIniEmpresa
     }
 
     class Vendedor {
@@ -54,5 +55,6 @@
     EmpresaPoseedora "1..*" -- "1..*" AreaMercado : cubre
     EmpresaPoseedora "1..*" -- "1..*" Pais : actua
     Vendedor -- Vendedor : capta
-    Vendedor <-- Captado
+    Vendedor --  Captado
+    Asesor "1..*" -- "1..*" AreaMercado : cubre
 ```
