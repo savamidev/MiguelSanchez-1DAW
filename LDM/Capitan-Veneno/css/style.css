@@ -192,8 +192,61 @@ tbody {
   }
 }
 
-@media (min-width: 768px) {
+/* Esta medida está vacía ya que pasamos del estrecho al ancho directamente
+Agregado bg para diferenciar entre tamaños*/
+@media (min-width: 728px) {
   * {
-    background-color: aqua;
+    background-color: bisque;
   }
+}
+
+@media (min-width:1024px) {
+ * {
+  background-color: transparent;
+ }
+
+aside {
+  img {
+    width: 300px;
+    height: 205px;
+  }
+}
+
+.bg-contenido {
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 0.8em;
+  }
+
+  p {
+    font-size: 0.57em;
+  }
+  
+}
+
+figure {
+  img{
+    width: 180px;
+
+  }
+}
+
+.cite-content {
+  font-size: 1em;
+  height: 135px;
+}
+
+table {
+  margin: auto;
+  font-size: 0.7em;
+  width: 500px;
+}
+
+footer {
+}
+
 }
