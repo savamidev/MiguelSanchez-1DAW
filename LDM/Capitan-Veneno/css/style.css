@@ -69,7 +69,16 @@ aside {
 footer {
   grid-area: footer;
   background-color: black;
-  color: white;
+  color: rgba(255, 255, 255, 0.804);
+  text-align: center;
+  padding-top: 15px;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+
+  span {
+    color: rgba(255, 0, 0, 0.804);
+
+  }
 }
 
 img {
