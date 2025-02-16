@@ -1,29 +1,59 @@
 ```mermaid
     classDiagram
 
-    class RevistaSoN {
+    class RevistaSon {
     <<abstract>>
     }
 
-    class Papel {
 
+    class Suscripcion {
+    -Double precio
+    -descuentoAplicable(Duracion : duracion) : void
     }
 
-    class Quiosco {
-    }
-
-    class Digital {
-    -Boolean isSubs
-    }
-
-    class PortalWeb {
+    class MetodoPago {
     
     }
 
-    Revista "1..*" <|-- "1" Papel : distribuida
-    Revista "1..*" <|-- "1" Digital : distribuida
-    Papel "1..*" -- "1" Quiosco : disponible
-    Digital "1..*" -- "1" PortalWeb : disponible
+    class TarjetaCredito{
+    -Integer numTarjeta
+    -String fechaCaducidad
+    -String nombreTitular
+    }
 
+    class Paypal{
+    -String correoElec
+    -String nombrePropi
+    }
+
+    class DomiBanca{
+    -Integer numeroCuenta
+    -String nombreTiturlar
+    }
+
+    class Duracion {
+    <<ENUM>>
+    TRIMESTRAL
+    SEMESTRAL
+    ANUAL
+    }
+
+    class Lector {
+    -String nombre
+    -String apellidos
+    -String direccionEnvio
+    -String contraseña
+    -String correoElectronico
+    -accesoContenido(String : contraseña, String : correoElectronico) : void
+    }
+
+
+    RevistaSon "1..*" -- "0..*" Lector : comprar
+    RevistaSon "0..n" -- "0..1" Suscripcion : ofrecer
+    Suscripcion "1..*" -- "1" Duracion : tener
+    Suscripcion "1..*" -- "1..*" MetodoPago : tener
+    MetodoPago "0..*" -- "0..1" TarjetaCredito : tener
+    MetodoPago "0..*" -- "0..1" Paypal : tener
+    MetodoPago "0..*" -- "0..1" DomiBanca : tener
 
 ```

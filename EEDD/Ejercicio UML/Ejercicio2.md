@@ -20,9 +20,15 @@
     SCIFI
     }
 
+    class PersonaParticipante {
+        <<abstract>>
+        -String nombre
+        -String apellidos
+        -String fechaNaci
+        -String nacionalidad
+    }
 
-
-
-    Pelicula "*" -- "1" Genero : pertenece
+    Pelicula "0..n" -- "1..n" Genero : pertenece
+    Pelicula "0..n" -- "0..n" PersonaParticipante : involucrada
 
 ```

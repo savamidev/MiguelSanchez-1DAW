@@ -1,60 +1,48 @@
 ```mermaid
     classDiagram
 
-    class Holding {
-        <<interface>>
-    }
+
 
     class EmpresaPoseedora {
-    -String nombre
-    -String fechaEntrada
-    -Double facturacionAnual
-    -AreaMercado areaAccion
-    -Pais paisSede
+        -String nombre
+        -String fechaEntrada
+        -Double factuAnual
+        -Integer numVendedores
+        -Pais paisSede
     }
 
     class AreaMercado {
-    -List <EmpresaPoseedora> : grupoEmpresa
-    -String nombreArea
-    -String descripcionArea
-
-    -addEmpresa(empresa : Empresa) : void
+        -String nombre
+        -String descripcion
     }
     
     class Pais {
-    -String nombre
-    -Double PIB
-    -Integer numHabi
-    -String capital
+        -String nombre
+        -Double PIB
+        -Integer numHabi
+        -String capital
     }
 
     class Asesor {
-    -Integer codiAsesor
-    -String nombre
-    -String titulo
-    -String fechaIniEmpresa
+        -Integer codiAsesor
+        -String nombre
+        -String direccion
+        -String titulo
+        -String fechaAreaEmpresa
     }
 
     class Vendedor {
         -Integer codigoVendedor
         -String nombre
         -String direccion
-        -Captado vendedoresCaptados
-        -EmpresaPoseedora empresaTrabaja
+        -String fechaCapta
     }
     
-    class Captado {
-        -List<Vendedores> captados
-        -addList(vendedor : Vendedor, fechaCap String) : void
-    }
 
-    Holding "1" <-- "1..*" EmpresaPoseedora : posee
-    Holding "1" <-- "1..*" Vendedor : posee
-    Holding "1" <-- "1..*" Asesor : posee
-
-    EmpresaPoseedora "1..*" -- "1..*" AreaMercado : cubre
-    EmpresaPoseedora "1..*" -- "1..*" Pais : actua
-    Vendedor -- Vendedor : capta
-    Vendedor --  Captado
-    Asesor "1..*" -- "1..*" AreaMercado : cubre
+    Vendedor -- Vendedor : captar
+    EmpresaPoseedora "1"-- "1..*" Vendedor : trabajar
+    EmpresaPoseedora "1..*" -- "1..*" AreaMercado : cubrir
+    EmpresaPoseedora "1..*" -- "1..*" Pais : actuar
+    Asesor "1...*" -- "1..*" AreaMercado : soportar
+    
 ```

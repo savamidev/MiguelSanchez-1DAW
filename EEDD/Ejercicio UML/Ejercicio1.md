@@ -1,54 +1,43 @@
 ```mermaid
     classDiagram
-    class SistemaEducativo {
-        <<interface>>
-        
-    }
+   
 
-    class Institucion {
-        <<abstract>>
-        
+
+    class Instituto {
+    #infoActores() : void
     }
     
-    class Instituto {
-  
-    }
 
-    class  ActoresEducativos{
+    class  ActorEducativo{
         <<abstract>>
         #String nombre
         #Integer edad
-        #infoActores() : void
     }
 
     class  Docente{
-       #Double sueldoBruto
-       #Tutor 
+       -Double sueldoBruto
+       -Boolean isTutor
+       -Grupo claseX
     }
 
-    
-    class  Tutor{
-    
+    class Grupo {
+        -List<Alumno> grupoClase
     }
 
-    
-    class  EquipoProfesor{
-    -List Profesor profesores
-    -addProfesor(nombreProfesor : Profesor) : void
+    class EquipoEducativo {
+        -List<Docente> equipoEducativo
     }
-
     
     class  Alumno{
-        -String teléfonoContac
+        -String teléfonoContacto
     }
 
 
-    SistemaEducativo <|-- Institucion
-    SistemaEducativo <|-- ActoresEducativos
-    Institucion <|-- Instituto
-    ActoresEducativos <|-- Docente
-    ActoresEducativos <|-- Alumno
-    Docente <|-- Tutor
-    Tutor "1" -- "1" EquipoProfesor : tiene
-    
+    Instituto <|-- ActorEducativo
+    ActorEducativo <|-- Docente
+    ActorEducativo <|-- Alumno
+    Docente -- Grupo
+
+    %% Mirar las realaciones entre docente y tutor, tutor es una entidad que hereda de docente, estableciendo
+    %% una relación con docente N M lo que crea una tabla intermedia que es el equipodocente
 ```
