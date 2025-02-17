@@ -11,7 +11,7 @@
     class Mensaje {
     #Integer remitente
     #Integer destinatario
-    +Mensaje(SMS : tipoMensaje, remitente : Double, destinatario : Double)
+    +Mensaje(TipoMensaje : mensaje, remitente : Double, destinatario : Double)
     -guardarInformacionMovil(telefono : destinatario) : void
     +getRemitente() : Double
     +getDestinatario() : Double
