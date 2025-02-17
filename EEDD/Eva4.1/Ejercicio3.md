@@ -13,8 +13,8 @@
     #Integer destinatario
     +Mensaje(TipoMensaje : mensaje, remitente : Double, destinatario : Double)
     -guardarInformacionMovil(telefono : destinatario) : void
-    +getRemitente() : Double
-    +getDestinatario() : Double
+    +getRemitente() : Integer
+    +getDestinatario() : Integer
     }
     
     class SMS {
