@@ -43,6 +43,6 @@
     EmpresaPoseedora "1"-- "1..*" Vendedor : trabajar
     EmpresaPoseedora "1..*" -- "1..*" AreaMercado : cubrir
     EmpresaPoseedora "1..*" -- "1..*" Pais : actuar
-    Asesor "1...*" -- "1..*" AreaMercado : soportar
+    Asesor "1..*" -- "1..*" AreaMercado : soportar
     
 ```
