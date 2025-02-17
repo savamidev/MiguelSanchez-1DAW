@@ -2,7 +2,7 @@
     classDiagram
 
     class CursoUniversitario {
-    -Estudiante[] listaEstudiantes
+    -ArrayList<<Estudiante>> listaEstudiantes
 
     -addEstudiante(Estudiante nombreEstudiante) : void
     -comproIDEstudiante() : boolean
