@@ -4,7 +4,7 @@ public class Tienda {
     private String nombre;
     private String propietario;
     private int identificador;
-    private int numeroProductos;
+    private static int numeroProductos;
 
     public Tienda(String nombre, String propietario, int identificador, int numeroProductos) {
         this.nombre = nombre;
@@ -15,20 +15,20 @@ public class Tienda {
     }
 
     public boolean tiendaLlena() {
-        return numeroProductos < 100;
+        return numeroProductos > 100;
     }
 
     public boolean tiendaVacia() {
         return numeroProductos == 0;
     }
 
-    public void addComptador(Computador computador) {
+    public void addComptador(Computadora computadora) {
         numeroProductos++;
     }
 
     // elimiar
 
-    public int buscar(Computador computador) {
+    public int buscar(Computadora computadora) {
         return numeroProductos;
     }
 
