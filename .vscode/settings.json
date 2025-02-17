@@ -1,5 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "EEDD/Unir clases UML"
+        "EEDD/UnirUML/src/test",
+        "EEDD/Unir clases UML",
+        "EEDD/Unir UML/UML/src"
     ]
 }
