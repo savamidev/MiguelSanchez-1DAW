@@ -1,17 +1,19 @@
 package parte2;
 
 public class Estudiante {
-    private String nombre;
-    private String apellidos;
-    private static int codigo;
-    private int numeroSemestre;
-    private double notaFinal;
+    private String nombre = "";
+    private String apellidos = "";
+    private static int codigo = 1;
+    private int id;
+    private int numeroSemestre = 0;
+    private double notaFinal = 0.0;
 
-    public Estudiante(String nombre, String apellidos, int numeroSemestre, double notaFinal) {
+    public Estudiante(String nombre, String apellidos, int numeroSemestre, double notafinal) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.numeroSemestre = numeroSemestre;
-        this.notaFinal = notaFinal;
+        this.notaFinal = notafinal;
+        this.id = codigo;
         codigo++;
     }
 
@@ -23,16 +25,16 @@ public class Estudiante {
         return apellidos;
     }
 
-    public int getCodigo() {
-        return codigo;
-    }
-
     public int getNumeroSemestre() {
         return numeroSemestre;
     }
 
     public double getNotaFinal() {
         return notaFinal;
+    }
+
+    public int getId() {
+        return id;
     }
 
     @Override
