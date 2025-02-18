@@ -23,7 +23,7 @@ public class Estudiante {
         return apellidos;
     }
 
-    public static int getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
@@ -37,7 +37,11 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return super.toString();
+        return "Estudiante{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", numeroSemestre=" + numeroSemestre +
+                ", notaFinal=" + notaFinal +
+                '}';
     }
 }
