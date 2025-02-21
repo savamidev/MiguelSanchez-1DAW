@@ -14,7 +14,9 @@ public class Computadora {
         this.sistemaOperativo = sistemaOperativo;
         this.precio = precio;
     }
-
     
 
+    public String getMarca() {
+        return marca;
+    }
 }
