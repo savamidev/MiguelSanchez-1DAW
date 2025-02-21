@@ -7,7 +7,7 @@ public class Tienda {
     private String propietario = "";
     private int identificador = 0;
     private static int numeroProductos = 0;
-    private ArrayList<Computadora> computadoras;
+    private ArrayList<Computadora> computadoras = new ArrayList<>();
 
     public Tienda(String nombre, String propietario, int identificador, int numeroProductos) {
         this.nombre = nombre;
@@ -24,15 +24,15 @@ public class Tienda {
     }
 
     public boolean tiendaVacia() {
-        if (computadoras == null) {
+        if (computadoras.isEmpty()) {
             return true;
         }
         return false;
     }
 
-    public void addComptador(Computadora computadora) throws Exception {
+    public void addComptador(Computadora computadora) {
         if (tiendaLlena()) {
-            throw new Exception("Tienda llena, no es posible añadir ordenadores");
+            System.out.println("La tienda está llena, la computadora " + computadora + "no ha sido añadida.");;
         }
 
         computadoras.add(computadora);
