@@ -2,6 +2,7 @@
   margin: 0px;
   font-family: sans-serif;
   --separacion: 25px;
+  --letraSize: 0.9em;
 }
 
 header,
@@ -39,12 +40,14 @@ ul {
   margin-bottom: var(--separacion);
 }
 
-article, aside {
-  background-color: #f7f7f7;
+article,
+aside {
+  background-color: #eef5fc;
   padding: 25px;
 
   p {
     padding-bottom: var(--separacion);
+    font-size: var(--letraSize);
   }
 }
 
@@ -54,17 +57,27 @@ article, aside {
 }
 
 #gallery {
-  
-    text-align: center;
+  text-align: center;
 
   #photos {
     margin: 50px 0px 50px;
 
-
     img {
-      width: 70%;
+      width: 300px;
       margin: 10px;
       border-radius: 10px;
     }
   }
+}
+
+@media (min-width: 768px) {
+  #gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  
 }
