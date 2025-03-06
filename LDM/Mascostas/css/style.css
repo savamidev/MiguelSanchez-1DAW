@@ -76,8 +76,22 @@ aside {
     flex-direction: column;
     align-items: center;
   }
+
+  aside {
+    ul {
+      padding: 0px 110px 0px;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
+  #quees {
+    padding: 0px 280px 25px;
+  }
   
+  aside {
+    ul {
+      padding: 0px 150px 0px;
+    }
+  }
 }
