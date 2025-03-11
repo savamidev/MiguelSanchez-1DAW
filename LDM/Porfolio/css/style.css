@@ -12,6 +12,7 @@
   #container {
     display: flex;
     flex-direction: column;
+    height: 100%;  
   }
 
   .namePosition {
@@ -98,7 +99,7 @@
 
   .toggle-label .hidden-content {
     display: none;
-    font-size: 8.5px;
+    font-size: 9px;
     font-weight: normal;
     background-color: #000;
   }
@@ -111,7 +112,6 @@
     width: 150px;
     height: 150px;
     text-align: center;
-
   }
 
   #visibleAbout:checked + p.aboutText .toggle-label .hidden-content {
@@ -145,3 +145,32 @@
     }
   }
 
+nav {
+  font-size: 10px;
+  margin-top: 20px;
+
+
+  ul {
+    list-style: none;
+    display: inline-flex;
+    margin-right: 40px;
+    li {
+      margin: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;       
+      font-style: normal;
+    }
+  }
+}
+
+
+footer {
+  color: var(--primaryColor);
+  background-color: #000;
+  font-size: 10px;
+  text-align: center;
+  padding: 15px;
+}
