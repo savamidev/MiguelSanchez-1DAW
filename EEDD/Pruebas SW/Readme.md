@@ -1,14 +1,13 @@
-# 🧪 Diseño de Pruebas de Software: ¡Hackeando Bugs como un PRO! 🚀🔥
+# 🧪 Diseño de Pruebas de Software 🔥
 
-![Pruebas de Software](https://source.unsplash.com/1000x400/?technology,testing)
+![Pruebas testing DS](image.png)
 
 > "El código sin pruebas es solo una suposición" - Un desarrollador con experiencia 👀
 
-Bienvenido al **mundo de las pruebas de software**, donde los errores no son solo problemas... ¡son desafíos a superar! 🏆
 
 ---
 
-## 🏗️ 1. Planificación de las Pruebas: La Base de un Software Sólido
+## 🏗️ 1. Planificación de las Pruebas:
 
 ### 🎯 ¿Por qué son necesarias?
 
@@ -33,7 +32,7 @@ Bienvenido al **mundo de las pruebas de software**, donde los errores no son sol
 ```ascii
   _______     _______     _______     _______     _______     _______
  |       |   |       |   |       |   |       |   |       |   |       |
- | Negra | → | Carga | → | Estrés | → | Estab. | → | Regr. | → | Func. |
+ | Negra | → | Carga | → | Estrés| → | Estab.| → | Regr. | → | Func. |
  |_______|   |_______|   |_______|   |_______|   |_______|   |_______|
 
   _______
@@ -70,59 +69,101 @@ Bienvenido al **mundo de las pruebas de software**, donde los errores no son sol
 
 ---
 
-## 📝 3. Procedimientos y Casos de Prueba: De la Teoría a la Práctica 🎭
+## 📝 3. Procedimientos y Casos de Prueba: De la Teoría a la Práctica 
 
-Un **caso de prueba** define los pasos y condiciones para validar una funcionalidad específica.
+Proceso estructurado que busca garantizar la calidad del software antes de su implementación.
 
-```yaml
-Caso de prueba: CP-001
-Descripción: Verificar login de usuario
-Precondición: Usuario registrado en el sistema
-Pasos:
-  1. Ingresar usuario y contraseña válidos
-  2. Click en "Iniciar sesión"
-  3. Verificar acceso a la página principal
-Resultados esperados:
-  - El usuario accede correctamente a su cuenta
-```
+### ☑️ Diseño de casos de prueba
+Escenarios específicos diseñados para validar funcionalidades del software. Se crean a partir de los requisitos del sistema, considerando tanto los casos de uso normales como las posibles excepciones.
+
+##### ⚠️ Deben incluir:
+
+- Identificador único: Para su trazabilidad.
+- Descripción del caso: Explicación clara de lo que se va a probar.
+- Datos de entrada: Valores específicos que el usuario o el sistema deben ingresar.
+- Pasos a seguir: Acciones detalladas para ejecutar la prueba.
+- Resultado esperado: Qué debe ocurrir si la funcionalidad es correcta.
+- Resultado obtenido: Lo que realmente ocurre tras la prueba.
+
+
+### ☑️ Diseño de procedimientos de prueba
+Organizan la ejecución de los casos de prueba en un flujo lógico y eficiente.
+
+##### ⚠️ Deben incluir:
+
+- Definición del entorno de pruebas: Se establecen los requisitos del sistema, software y hardware necesarios para la ejecución.
+- Selección y orden de los casos de prueba: Se priorizan los casos de prueba según su impacto en el software.
+- Ejecución y documentación: Se sigue el plan establecido y se registran los resultados para futuras referencias.
+- Análisis de resultados: Se comparan los resultados obtenidos con los esperados y se identifican defectos o errores.
+- Revisión y mantenimiento: Los casos de prueba se ajustan conforme evoluciona el software o se detectan mejoras en la metodología.
+
+
+### ☑️ Diseño de procedimientos de prueba
+
+- Pruebas unitarias: Se centran en pequeños fragmentos de código, como funciones o métodos.
+- Pruebas de integración: Evalúan la interacción entre módulos o sistemas.
+- Pruebas funcionales: Verifican que el software cumple con los requisitos especificados.
+- Pruebas de rendimiento: Analizan la respuesta del sistema bajo diferentes condiciones de carga.
+- Pruebas de regresión: Aseguran que los cambios o correcciones no afecten funcionalidades existentes.
+  
+
 
 ✅ **Consejo**: Automatiza pruebas repetitivas con herramientas como **Selenium**, **Cypress** o **JUnit**.
 
 ---
 
-## 🕵️ 4. Herramientas de Depuración: Aliados del Desarrollador 🛠️
+## 🛠️ 4. Herramientas de Depuración
 
-| Herramienta  | Función |
-|-------------|------------------|
-| **GDB** | Depuración en C/C++ |
-| **WinDbg** | Análisis avanzado en Windows |
-| **Selenium** | Pruebas web automatizadas |
-| **Postman** | Pruebas de API |
-| **JMeter** | Simulación de carga |
+### ¿Qué son?
+- **Definición**: Funcionalidades integradas en los IDEs para supervisar la ejecución de programas y detectar errores. 🖥️
 
-📌 **Tip PRO**: Usa `console.log()` en JavaScript o `System.out.println()` en Java para detectar valores inesperados.
+### ¿Cómo ayudan a detectar errores?
+- **Funcionalidades clave**:
+    - 🛑 **Puntos de ruptura**: Pausan la ejecución en puntos específicos.
+    - 👣 **Ejecución paso a paso**: Permite analizar el código línea por línea.
+    - 🔍 **Inspección de variables**: Muestra los valores de las variables en tiempo real.
+    - 🧮 **Evaluación de expresiones**: Comprueba el resultado de expresiones o condiciones lógicas.
 
----
-
-## 🎙️ 5. Validaciones: El Cliente Tiene la Última Palabra 👨‍💻
-
-👤 **Pruebas de Aceptación** → ¿El software cumple las expectativas del usuario final?  
-🔄 **Iteración con el cliente** → Recopilar feedback y realizar ajustes.  
-🛠️ **Pruebas en entornos reales** → Evitar errores que solo aparecen en producción.  
+- **Tipos de errores detectados**:
+    - 🚨 **Errores de compilación**: Detectados automáticamente por el IDE.
+    - 🐞 **Errores lógicos (bugs)**: Identificados mediante análisis del flujo del programa y valores de variables.
 
 ---
 
-## 📏 6. Normas de Calidad: Estándares que Rigen la Industria 📜
+## ✅ 5. Validaciones
 
-📌 **ISO/IEC 25000 (SQuaRE)** → Modelos de calidad de software.  
-📌 **ISO/IEC 12207** → Definición de procesos en el ciclo de vida del software.  
-📌 **ISTQB** → Certificación internacional en testing.  
-📌 **IEEE 829** → Estándar para documentación de pruebas.  
+### Importancia del cliente en la evaluación del software
+- **Rol del cliente**:
+    - 🎯 **Decisión final**: El cliente decide si el software cumple con los requisitos.
+    - 👀 **Detección de problemas**: Identifica errores de usabilidad y funcionalidad que los desarrolladores pueden pasar por alto.
+    - 🔄 **Retroalimentación**: Proporciona comentarios para ajustes y mejoras antes de la entrega final.
+
+- **Proceso de validación**:
+    - 🧪 **Pruebas de cala media**: Demuestran la conformidad con los requisitos.
+    - 📋 **Plan y procedimiento de pruebas**: Aseguran que se cumplen todos los requisitos funcionales, de rendimiento, documentación, etc.
 
 ---
 
-## 🎯 Conclusión: Prueba Todo, Rompe Todo, Mejora Todo 💡
+## 📜 6. Normas de Calidad
 
-🧐 Diseñar pruebas de software **no es solo encontrar errores**, es **evitar que sucedan en producción**.  
+### Principales estándares utilizados en la industria
+- **BSI (British Standards Institution)**:
+    - 📖 **BS 7925-1**: Vocabulario para pruebas de software.
+    - 📖 **BS 7925-2**: Pruebas de componentes de software.
 
-🔍 **Si puedes romperlo, puedes mejorarlo**. ¡Haz que tu software sea **inquebrantable**! 🦾
+- **IEEE (Institute of Electrical and Electronics Engineers)**:
+    - 📄 **IEEE 829**: Documentación de pruebas de software.
+    - 📄 **IEEE 1008**: Pruebas de unidad.
+
+- **ISO/IEC 29119**:
+    - 🌍 **Norma unificadora**: Cubre vocabulario, procesos, documentación y técnicas para todo el ciclo de vida del software.
+    - 🛠️ **Aplicación**: Utilizada en cualquier proyecto de desarrollo o mantenimiento de software.
+
+### Importancia de las normas
+- 🏗️ **Estandarización**: Proporcionan un marco común para asegurar la calidad y consistencia del software.
+- 📊 **Cobertura completa**: Desde la planificación hasta la ejecución y reporte de pruebas.
+
+
+
+
+
