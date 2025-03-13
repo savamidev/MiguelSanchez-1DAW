@@ -1,154 +1,291 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-  * {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-optical-sizing: auto;
-    margin: 0;
-    /* Define la variable y fondo principal */
-    --primaryColor: #f8cb74;
-    background-color: var(--primaryColor);
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  --primaryColor: #f8cb74;
+  background-color: var(--primaryColor);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.namePosition {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.name,
+.subname {
+  width: 95%;
+  font-size: 21vw;
+  margin: auto;
+  font-weight: bolder;
+  letter-spacing: 15px;
+}
+
+.worker {
+  
+  width: 90%;
+  margin: 10px auto 0px;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  height: 35px;
+  border-radius: 15px;
+}
+
+.worker p {
+  background-color: #000;
+  width: 100%;
+  color: var(--primaryColor);
+  border-radius: 30px;
+  padding: 6px;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
   }
-
-  #container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;  
+  100% {
+    transform: translateX(-100%);
   }
+}
 
-  .namePosition {
-    width: 100%;
-    height: 40vh;
-    text-align: center;
-    align-content: center;
+.containerTwo {
+  margin-top: 100px;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  font-size: 15vw;
+  font-weight: bolder;
+
+  p {
+    font-size: 13vw;
   }
+}
 
-  .name,
-  .subname {
-    width: 95%;
-    font-size: 21vw;
-    margin: auto;
-    font-weight: bolder;
-    letter-spacing: 15px;
+#visibleAbout {
+  display: none;
+}
+
+.aboutText {
+  display: inline-flex;
+  align-items: center;
+}
+
+.toggle-label {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.toggle-label .placeholder {
+  display: inline;
+}
+
+.toggle-label .hidden-content {
+  display: none;
+  font-size: 9.5px;
+  font-weight: normal;
+  line-height: 15px;
+  background-color: #000;
+}
+
+#visibleAbout:checked + p.aboutText .toggle-label {
+  background-color: #000;
+  border-radius: 50%;
+  color: white;
+  padding: 0.9em 1em 1.4em;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  align-content: center;
+}
+
+#visibleAbout:checked + p.aboutText .toggle-label .hidden-content {
+  display: inline;
+}
+
+#visibleAbout:checked + p.aboutText .toggle-label .placeholder {
+  display: none;
+}
+
+.placeholder {
+  display: inline-block;
+  animation: colorChange 8s linear infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: rgb(255, 255, 255);
   }
-
-
-  .worker {
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    background-color: #000;
-    height: 30px;
-    border-radius: 15px;
+  25% {
+    color: rgb(126, 126, 126);
   }
-
-  .worker p {
-    background-color: #000;
-    width: 100%;
-    color: var(--primaryColor);
-    border-radius: 30px;
-    padding: 6px;
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 10s linear infinite;
+  50% {
+    color: rgb(42, 42, 42);
   }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  75% {
+    color: rgb(127, 127, 127);
   }
-
-  .containerTwo {
-    width: 100%;
-    height: 30vh;
-    text-align: center;
-    align-content: center;
-    font-size: 15vw;
-    font-weight: bolder;
-
-    p {
-      font-size: 3.6rem;
-    }
+  100% {
+    color: rgb(210, 210, 210);
   }
+}
 
-  #visibleAbout {
-    display: none;
-  }
+#visibleContact {
+  display: none;
+}
 
-  .aboutText {
-    display: inline-flex;
-    align-items: center;
-  }
+.contactText {
+  display: inline-flex;
+  align-items: center;
+}
 
-  .toggle-label {
-    cursor: pointer;
-    transition: all 0.5s ease;
-    display: inline-block;
-    padding: 0 0.1em;
-    position: relative;
-  }
+.toggle-label-contact{
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display: inline-block;
+  position: relative;
+}
 
-  .toggle-label .placeholder {
-    display: inline;
-  }
+.toggle-label-contact .placeholder {
+  display: inline;
+}
 
-  .toggle-label .hidden-content {
-    display: none;
-    font-size: 9px;
+.toggle-label-contact .hidden-contact {
+  display: none;
+  font-size: 12px;
+  font-weight: 900;
+  background-color: #000;
+}
+
+#visibleContact:checked + p.contactText .toggle-label-contact {
+  background-color: #000;
+  color: white;
+  border-radius: 50px;
+  padding: 0.3em;
+  text-align: center;
+  align-content: center;
+
+  a {
+    font-size: 10px;
     font-weight: normal;
-    background-color: #000;
+    background-color: inherit;
+    text-decoration: none;
+    color: inherit;
+    margin-left: 3px;
   }
+}
 
-  #visibleAbout:checked + p.aboutText .toggle-label {
-    background-color: #000;
-    border-radius: 50%;
-    color: white;
-    padding: 1em;
-    width: 150px;
-    height: 150px;
-    text-align: center;
-  }
+#visibleContact:checked + p.contactText .toggle-label-contact .hidden-contact {
+  display: inline;
+}
 
-  #visibleAbout:checked + p.aboutText .toggle-label .hidden-content {
-    display: inline;
-  }
+#visibleContact:checked + p.contactText .toggle-label-contact .placeholder {
+  display: none;
+}
 
-  #visibleAbout:checked + p.aboutText .toggle-label .placeholder {
-    display: none;
-  }
 
-  .placeholder {
-    display: inline-block;
-    animation: colorChange 8s linear infinite;
-  }
+img {
+  border-radius: 10px;
+  width: 100px;
+  height: auto;
+}
 
-  @keyframes colorChange {
-    0% {
-      color: rgb(255, 255, 255);
-    }
-    25% {
-      color: rgb(126, 126, 126);
-    }
-    50% {
-      color: rgb(42, 42, 42);
-    }
-    75% {
-      color: rgb(127, 127, 127);
-    }
-    100% {
-      color: rgb(210, 210, 210);
-    }
+.hidden-porfolio {
+  display: none;
+  background-color: #000;
+ 
+}
+
+#visiblePorfolio {
+  display: none;
+}
+
+.PorfolioText {
+  display: inline-flex;
+  align-items: center;
+}
+
+.toggle-label-porfolio {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.toggle-label-porfolio .placeholder {
+  display: inline;
+}
+
+.toggle-label-porfolio .hidden-porfolio {
+  display: none;
+  font-size: 12px;
+  font-weight: 900;
+  background-color: #000;
+}
+
+#visiblePorfolio:checked + p.porfolioText .toggle-label-porfolio {
+  border-radius: 50px;
+  height: 110px;
+  text-align: center;
+  align-content: center;
+}
+
+#visiblePorfolio:checked + p.porfolioText .toggle-label-porfolio .hidden-porfolio {
+  display: flex;
+  flex-direction: row;    
+  justify-content: center; 
+
+}
+
+#visiblePorfolio:checked + p.porfolioText .toggle-label-porfolio .placeholder {
+  display: none;
+}
+
+#visiblePorfolio:checked ~ .hidden-porfolio {
+  display: block;
+}
+
+.marquee {
+  background-color: #000;
+  padding: 15px;
+  display: flex;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX();
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.marquee img {
+  width: 100px;
+  height: auto;
+  margin-right: 100px;
+}
+
+
+
 
 nav {
-  font-size: 10px;
-  margin-top: 20px;
-
+  font-size: 11px;
+  margin-top: 30px;
 
   ul {
     list-style: none;
@@ -160,12 +297,11 @@ nav {
 
     a {
       text-decoration: none;
-      color: inherit;       
+      color: inherit;
       font-style: normal;
     }
   }
 }
-
 
 footer {
   color: var(--primaryColor);
@@ -173,4 +309,7 @@ footer {
   font-size: 10px;
   text-align: center;
   padding: 15px;
+}
+
+@media (min-with: 1024) {
 }
