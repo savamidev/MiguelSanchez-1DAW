@@ -232,9 +232,6 @@ img {
 
 .toggle-label-porfolio .hidden-porfolio {
   display: none;
-  font-size: 12px;
-  font-weight: 900;
-  background-color: #000;
 }
 
 #visiblePorfolio:checked + p.porfolioText .toggle-label-porfolio {
