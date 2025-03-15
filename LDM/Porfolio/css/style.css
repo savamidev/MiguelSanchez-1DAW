@@ -242,7 +242,7 @@
 #contactoForm input:focus,
 #contactoForm select:focus,
 #contactoForm textarea:focus {
-  border-color: var(--primaryColor);
+  border-color: var(--textFormColor);
   box-shadow: 0 0 1px rgba(248, 204, 116, 0.317);
 }
 
