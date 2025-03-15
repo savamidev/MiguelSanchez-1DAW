@@ -176,12 +176,16 @@
   border-radius: 8px;
   width: 85%;
   margin: 10px auto;
+  
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 #visibleContact:checked ~ .hidden-contact {
   display: flex;
   flex-direction: column;
-  
+  opacity: 1;
+
 }
 
 #contactoForm {
@@ -203,13 +207,16 @@
   background-color: var(--secondColor);
   align-content: center;
   padding-bottom: 10px;
+  border-radius: 5px;
+
 }
 
 .genero {
   background-color: var(--secondColor);
   text-align: left;
-
   padding: 0px 0px 5px 10px;
+  border-radius: 5px;
+
 }
 
 
@@ -220,6 +227,8 @@
   padding: 10px;
   font-size: 10px;
   background-color: var(--secondColor);
+  border-radius: 5px;
+
   
 }
 
