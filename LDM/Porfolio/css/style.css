@@ -12,7 +12,7 @@
 #container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 }
 
 .namePosition {
@@ -176,9 +176,9 @@
   border-radius: 8px;
   width: 85%;
   margin: 10px auto;
-  
+
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.8s ease;
 }
 
 #visibleContact:checked ~ .hidden-contact {
