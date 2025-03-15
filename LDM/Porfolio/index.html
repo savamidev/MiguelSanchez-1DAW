@@ -35,8 +35,7 @@
                   Desarrollo de sistemas web escalables, optimización de bases
                   de datos garatizando consistencia, eficiencia y alto
                   rendimiento, integración de APIs, seguridad y trabajo bajo
-                  metodologías ágiles.
-                  Pensamiento analítico, gestión de
+                  metodologías ágiles. Pensamiento analítico, gestión de
                   equipos, alta resolución de problemas, proactivo, autodidacta,
                   creativo y comunicador.
                 </span>
@@ -47,7 +46,7 @@
           <section class="porfolio">
             <p class="porfolioText">
               PORF
-                <span class="placeholder">O</span>
+              <span class="placeholder">O</span>
               LIO
             </p>
           </section>
@@ -58,26 +57,71 @@
               C
               <label for="visibleContact" class="toggle-label-contact">
                 <span class="placeholder">O</span>
-                <span class="hidden-contact">
-                  <form id="contactoForm">
-                    <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" placeholder="Nombre" max="24" required>
-
-                    <label for="apelldios">Apellidos:</label>
-                    <input type="text" id="apelldios" name="apelldios" placeholder="Apellidos" max="48" required>
-
-                    <label for="genero">Género:</label>
-                    <input type="radio"  id="masculino" class="masculino" value="Masculino" required>
-                    <label for="masculino">Masculino</label>
-
-                    <input type="radio" id="femenino" class="femenino" value="Femenino">
-                    <label for="femenino">Femenino</label>
-
-                  </form>
-                </span>
               </label>
               NTACT
             </p>
+            <div class="hidden-contact">
+              <form id="contactoForm">
+                <label for="name">Nombre:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nombre"
+                  maxlength="24"
+                  required
+                />
+
+                <label for="apelldios">Apellidos:</label>
+                <input
+                  type="text"
+                  id="apelldios"
+                  name="apelldios"
+                  placeholder="Apellidos"
+                  maxlength="48"
+                  required
+                />
+
+                <label for="genero">Género:</label>
+                <input
+                  type="radio"
+                  id="masculino"
+                  name="genero"
+                  value="Masculino"
+                  required
+                />
+                <label for="masculino">Masculino</label>
+                <input
+                  type="radio"
+                  id="femenino"
+                  name="genero"
+                  value="Femenino"
+                />
+                <label for="femenino">Femenino</label>
+
+                <label for="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+
+                <label for="motivo">Motivo consulta:</label>
+                <select id="motivo" name="motivo" required>
+                  <option value="">Seleccione un motivo:</option>
+                  <option value="negocio">Negocio</option>
+                  <option value="consulta">Consulta</option>
+                  <option value="sugerencia">Sugerencia</option>
+                </select>
+
+                <input type="checkbox" id="terminos" name="terminos" required />
+                <label for="terminos">Acepta los términos y condiciones</label>
+
+                <button type="submit">Enviar</button>
+              </form>
+            </div>
           </section>
           <nav class="social-media">
             <ul>
