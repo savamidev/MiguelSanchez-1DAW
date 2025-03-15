@@ -174,7 +174,7 @@
   background-color: #000000;
   padding: 10px;
   border-radius: 8px;
-  width: 85%;
+  max-width: 80%;
   margin: 10px auto;
 
   opacity: 0;
@@ -372,16 +372,60 @@ nav {
     display: inline-flex;
     margin-right: 40px;
     li {
-      margin: 5px;
+      margin: 10px;
     }
 
     a {
+     
       text-decoration: none;
       color: inherit;
       font-style: normal;
+
     }
+    
   }
 }
+
+.icon {
+  font-size: 1.5rem;
+}
+.social-media li {
+  position: relative;
+  width: 50px; 
+  height: 1em; 
+}
+
+.social-media li a,
+.social-media li .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.5s ease;
+}
+
+.social-media li a {
+  opacity: 0;
+}
+
+.social-media li .icon {
+  opacity: 1; 
+}
+
+.social-media li:hover a {
+  opacity: 1; 
+  font-size: 0.8rem;
+  color: var(--primaryColor);
+  background-color: var(--secondColor);
+  padding: 7px;
+  border-radius: 5px;
+}
+
+.social-media li:hover .icon {
+  opacity: 0; 
+}
+
 
 footer {
   color: var(--primaryColor);
