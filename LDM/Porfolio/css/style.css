@@ -231,6 +231,22 @@
 
   
 }
+#contactoForm input,
+#contactoForm select,
+#contactoForm textarea {
+  outline: none;
+  border: 1px solid var(--secondColor);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contactoForm input:focus,
+#contactoForm select:focus,
+#contactoForm textarea:focus {
+  border-color: var(--primaryColor);
+  box-shadow: 0 0 1px rgba(248, 204, 116, 0.317);
+}
+
+
 
 #contactoForm input,
 #contactoForm select {
