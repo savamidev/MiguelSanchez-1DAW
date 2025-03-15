@@ -62,7 +62,7 @@
             </p>
             <div class="hidden-contact">
               <form id="contactoForm">
-                <label for="name">Nombre:</label>
+                <label for="name"></label>
                 <input
                   type="text"
                   id="name"
@@ -72,7 +72,7 @@
                   required
                 />
 
-                <label for="apelldios">Apellidos:</label>
+                <label for="apelldios"></label>
                 <input
                   type="text"
                   id="apelldios"
@@ -99,7 +99,7 @@
                 />
                 <label for="femenino">Femenino</label>
 
-                <label for="email">Email:</label>
+                <label for="email"></label>
                 <input
                   type="email"
                   id="email"
@@ -108,7 +108,10 @@
                   required
                 />
 
-                <label for="motivo">Motivo consulta:</label>
+                <label for="mensaje"></label>
+                <textarea  id="mensaje" name="mensaje">Escriba aquí su mensaje...</textarea>
+
+                <label for="motivo"></label>
                 <select id="motivo" name="motivo" required>
                   <option value="">Seleccione un motivo:</option>
                   <option value="negocio">Negocio</option>
@@ -116,8 +119,8 @@
                   <option value="sugerencia">Sugerencia</option>
                 </select>
 
-                <input type="checkbox" id="terminos" name="terminos" required />
                 <label for="terminos">Acepta los términos y condiciones</label>
+                <input type="checkbox" id="terminos" name="terminos" required />
 
                 <button type="submit">Enviar</button>
               </form>
