@@ -4,6 +4,8 @@
   font-family: "IBM Plex Sans", sans-serif;
   margin: 0;
   --primaryColor: #f8cb74;
+  --secondColor:  #232323;
+  --textFormColor:  rgba(184, 184, 184, 0.46);
   background-color: var(--primaryColor);
 }
 
@@ -162,45 +164,53 @@
 
 .toggle-label-contact .placeholder {
   display: inline;
+  
 }
 
 .hidden-contact {
   display: none;
-  font-size: 12px;
+  font-size: 19px;
   font-weight: 900;
   background-color: #000000;
-  padding: 5px;
+  padding: 10px;
   border-radius: 8px;
-  width: 300px;
+  width: 85%;
   margin: 10px auto;
 }
 
 #visibleContact:checked ~ .hidden-contact {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 #contactoForm {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  background-color:var(--secondColor);
 }
 
 #contactoForm label {
-  color: black;
+  color:rgba(184, 184, 184, 0.46);
   font-size: 0.9rem;
+  font-weight: normal;
+  background-color:var(--secondColor);
 }
 
 #contactoForm input,
 #contactoForm select,
 #contactoForm button {
-  padding: 5px;
+  margin-top: 10px;
+  padding: 10px;
   border: none;
-  font-size: 1rem;
+  font-size: 10px;
+  background-color: var(--secondColor);
+  
 }
 
 #contactoForm input,
 #contactoForm select {
-  background-color: #1a1a1a;
+  background-color: var(--secondColor);
   color: var(--primaryColor);
 }
 
@@ -215,7 +225,7 @@
 }
 
 #contactoForm button {
-  background-color: #1a1a1a;
+  background-color: var(--secondColor);
   color: var(--primaryColor);
   cursor: pointer;
   transition: background 0.3s ease;
@@ -224,6 +234,8 @@
 #contactoForm button:hover {
   background-color: #333;
 }
+
+
 
 
 img {
@@ -252,10 +264,12 @@ img {
   position: relative;
   cursor: pointer;
   transition: all 0.5s ease;
+  
 }
 
 .toggle-label-porfolio .placeholder {
   display: inline;
+  
 }
 
 .toggle-label-porfolio .hidden-porfolio {
@@ -304,8 +318,6 @@ img {
   height: auto;
   margin-right: 100px;
 }
-
-
 
 
 nav {
