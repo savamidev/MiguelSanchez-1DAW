@@ -58,9 +58,22 @@
               C
               <label for="visibleContact" class="toggle-label-contact">
                 <span class="placeholder">O</span>
-                <span class="hidden-contact"
-                  >Send to me:
-                  <a href="mailto:migue.626@gmail.com">migue.626@gmail.com</a>
+                <span class="hidden-contact">
+                  <form id="contactoForm">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" max="24" required>
+
+                    <label for="apelldios">Apellidos:</label>
+                    <input type="text" id="apelldios" name="apelldios" placeholder="Apellidos" max="48" required>
+
+                    <label for="genero">Género:</label>
+                    <input type="radio"  id="masculino" class="masculino" value="Masculino" required>
+                    <label for="masculino">Masculino</label>
+
+                    <input type="radio" id="femenino" class="femenino" value="Femenino">
+                    <label for="femenino">Femenino</label>
+
+                  </form>
                 </span>
               </label>
               NTACT
