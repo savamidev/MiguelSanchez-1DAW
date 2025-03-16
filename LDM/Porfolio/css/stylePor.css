@@ -1,31 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 * {
-    font-family: "IBM Plex Sans", sans-serif;
-    margin: 0;
-    --primaryColor: #f8cb74;
-    --secondColor:  #232323;
-    --textFormColor:  rgba(205, 205, 205, 0.562);
-    background-color: var(--primaryColor);
-  }
+  font-family: "IBM Plex Sans", sans-serif;
+  margin: 0;
+  --primaryColor: #f8cb74;
+  --secondColor: #232323;
+  --textFormColor: rgba(205, 205, 205, 0.562);
+}
+
+html {
+  background-color: var(--primaryColor);
+}
 
 header {
-  color: var(--secondColor);
-  margin: 80px 0px ;
-  padding: 5px;
+  padding: 100px 0px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 
   p {
+    color: var(--secondColor);
     font-size: 15vw;
     margin: auto;
     font-weight: bolder;
     letter-spacing: 10px;
+    position: relative;
+  }
+
+  a {
+    color: #000;
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 10px auto 0px;
+    padding: 10px;
+    transition-duration: 1s;
+  }
+
+  a:hover {
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+}
+
+header i {
+  font-size: 10px;
+  animation: arrowMove 1s infinite alternate;
+}
+
+@keyframes arrowMove {
+ 
+  to {
+    transform: translateY(10px);
   }
 }
 
 #container {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
-  margin-top: 150px;
   color: var(--secondColor);
+}
+
+.blockOne {
   display: flex;
   justify-content: space-around;
 }
@@ -34,50 +71,92 @@ img {
   height: 100px;
 }
 
-
 .project {
-  background-color: red;
+  display: flex;
+  position: relative;
   height: 330px;
-  width: 120px;
+  width: 110px;
   border-bottom: 100px;
   border-radius: 100px;
-  
-
-
-  p {
-    color: #ffffff;
-    font-weight: bold;
-    background-color: transparent;
-  }
-  
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
-.pOne {
-  background-image: url('../img/AstralisGame.png');
-  background-size: cover;
-  background-position: -75px 0px;
-  background-repeat: no-repeat;
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según prefieras */
+  z-index: 2;
+  transition-duration: 0.6s;
 }
 
-.pTwo {
-  background-image: url('../img/DiaryCheck.png');
-  background-size: cover;
-  background-position: -75px 0px;
-  background-repeat: no-repeat;
+.project-link {
+  color: #ffffff;
+  font-weight: 500;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  text-decoration: none;
+  transition-duration: 0.6s;
 }
 
+.bg-video1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-video2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-video3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pOne,
+.pTwo,
 .pThree {
-  background-image: url('../img/VPN.png');
-  background-size: cover;
-  background-position: -50px 0px;
-  background-repeat: no-repeat;
+  transition-duration: 1s;
 }
 
+.pOne:hover,
+.pTwo:hover,
+.pThree:hover {
+  height: 400px;
+  width: 170px;
+  box-shadow: 0 0 5px #ffffff;
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .project-link {
+    scale: 1.4;
+    text-shadow: 0 0 5px var(--secondColor);
+  }
+}
+
+.blockTwo {
+  margin-top: 250px;
+  text-align: center;
+}
 
 footer {
-    color: var(--primaryColor);
-    background-color: #000;
-    font-size: 10px;
-    text-align: center;
-    padding: 15px;
-  }
+  color: var(--primaryColor);
+  background-color: #000;
+  font-size: 10px;
+  text-align: center;
+  padding: 15px;
+}
