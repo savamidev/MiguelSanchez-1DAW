@@ -176,9 +176,8 @@
   border-radius: 8px;
   max-width: 80%;
   margin: 10px auto;
-
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease-in-out;
 }
 
 #visibleContact:checked ~ .hidden-contact {
@@ -374,16 +373,14 @@ nav {
     li {
       margin: 10px;
     }
-
-    a {
-     
-      text-decoration: none;
-      color: inherit;
-      font-style: normal;
-
-    }
-    
   }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-style: normal;
+  padding: 5px;
 }
 
 .icon {
@@ -402,7 +399,7 @@ nav {
   left: 0;
   width: 100%;
   text-align: center;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.3s ease-in;
 }
 
 .social-media li a {
@@ -410,7 +407,8 @@ nav {
 }
 
 .social-media li .icon {
-  opacity: 1; 
+  opacity: 1;
+  pointer-events: none;
 }
 
 .social-media li:hover a {
