@@ -160,6 +160,7 @@
   transition: all 0.5s ease;
   display: inline-block;
   position: relative;
+  
 }
 
 .toggle-label-contact .placeholder {
@@ -178,6 +179,7 @@
   margin: 10px auto;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
+  
 }
 
 #visibleContact:checked ~ .hidden-contact {
@@ -192,6 +194,7 @@
   flex-direction: column;
   background-color: black;
   gap: 2px;
+
 }
 
 #contactoForm label {
@@ -431,6 +434,7 @@ footer {
   font-size: 10px;
   text-align: center;
   padding: 15px;
+  margin-top: 20px;
 }
 
 @media (min-with: 1024) {

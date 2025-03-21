@@ -37,8 +37,8 @@ header {
   }
 
   a:hover {
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
   }
 
 }
@@ -49,7 +49,6 @@ header i {
 }
 
 @keyframes arrowMove {
- 
   to {
     transform: translateY(10px);
   }
@@ -75,7 +74,7 @@ img {
   display: flex;
   position: relative;
   height: 330px;
-  width: 110px;
+  width: 120px;
   border-bottom: 100px;
   border-radius: 100px;
   overflow: hidden;
@@ -93,7 +92,7 @@ img {
 }
 
 .project-link {
-  color: #ffffff;
+  color: #ffffff90;
   font-weight: 500;
   background-color: transparent;
   position: relative;
@@ -143,6 +142,8 @@ img {
   }
 
   .project-link {
+    color: #ffffff;
+
     scale: 1.4;
     text-shadow: 0 0 5px var(--secondColor);
   }
@@ -159,4 +160,5 @@ footer {
   font-size: 10px;
   text-align: center;
   padding: 15px;
+  margin-top: 20px;
 }
