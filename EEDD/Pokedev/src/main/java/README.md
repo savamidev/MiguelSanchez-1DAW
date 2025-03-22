@@ -2,19 +2,43 @@
     classDiagram
     class IRegion {
         <<interface>>
-        addGym(gym : Gym) : void
-        addTrainer(trainer : Trainer) : void
-        addPokemon(pokemon : Pokemon) :void
-        getGym() : List<Gym>
-        getTrainer() : List<Trainer>
-        getPokemon() : List<Pokemon>
+        +getNameRegion() : String
+        +setNameRegion(name : String) : void
+        +addGym(gym : Gym) : void
+        +removeGym(gym : Gym) : void
+        +getGyms() : List<Gym>
+        +addTrainer(trainer : Trainer) : void
+        +removeTrainer(trainer : Trainer) : void
+        +getTrainers() : List<Trainer>
+        +addPokemon(pokemon : Pokemon) :void
+        +removePokemon(pokemon : Pokemon) : void
+        +getPokemons() : List<Pokemon>
+        +findGymName(name : String) : Gym
+        +findTrainerName(name : String) : Trainer
+        +findPokemonName(name : String) : Pokemon
     }
     
     class Region {
-        name : String
-        gyms : List<Gym>
-        trainers : List<Trainer>
-        pokemons : List<Pokemon>
+        -name : String
+        -gyms : List<Gym>
+        -trainers : List<Trainer>
+        -pokemons : List<Pokemon>
+        +Region(name : String)
+        +getName(name : String) : void
+        +setName(name: String) : void
+        +addGym(gym : Gym) : void
+        +removeGym(gym : Gym) : void
+        +getGyms() : List<Gym>
+        +addTrainer(trainer : Trainer) : void
+        +removeTrainer(trainer : Trainer) : void
+        +getTrainers() : List<Trainer>
+        +addPokemon(pokemon : Pokemon) : void
+        +removePokemon(pokemon : Pokemon) : void
+        +getPokemons() : List<Pokemon>
+        +findGymByName(name: String) : Gym
+        +findTrainerByName(name: String) : Trainer
+        +findPokemonByName(name: String) : Pokemon
+        
     }
 
     class IGimnasio {
