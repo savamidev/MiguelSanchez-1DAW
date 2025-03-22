@@ -93,57 +93,119 @@
 
     class Persona {
         <<abstract>>
+        -name : String
+        +Persona(name : String)
+        +getNombrePersona() : String
+        +setNombrePersona(name : String)
     }
 
     class IEntrenador {
         <<interface>>
+        +getPokemons() : List<Pokemon>
+        +addPokemon(pokemon : Pokemon) : void
+        +removePokemon(pokemon : Pokemon) : void
+        +batalla() : void
     }
 
     class Entrenador {
+        -pokemons : List<Pokemon>
+        +Entranador(name : Sring)
+        +getPokemons() : List<Pokemon>
+        +addPokemon(pokemon : Pokemon) : void
+        +removePokemon(pokemon : Pokemon) : void
+        +batalla() : void
     }
 
     class IProfesor {
         <<interface>>
+        +getDepartamento() : String
+        +setDepartament(departamento : String) : void
     }
 
     class Profesor {
+        -departamento : String
+        +Profesor(name : String, departament : String)
+        +getDepartamento() : String
+        +setDepartamento(departament : String) : void
     }
 
     class Naturaleza {
         <<enumeration>>
+        +AGRESIVA
+        +CALMADA
+        +TIMIDA
+        +AUDACIOSA
+        +SERENA
     }
 
     class Tipo {
         <<enumeration>>
+        +FUEGO
+        +AGUA
+        +PLANTA
+        +ELECTRICO
+        +TIERRA
+        +HIELO
     }
 
     class IItem {
         <<interface>>
+        +getNombreItem() : String
+        +setNombreItem(name : String) : void
+        +getDescripcion() : String
+        +setDescripcion(descripcion : String) : void
+        +efecto(pokemon : Pokemon) : void
     }
 
     class Item {
+        -name : String
+        -descripcion : String
+        +Item(name : String, descripcion : String)
+        +getNombreItem() : String
+        +setNombreItem(name : String) : void
+        +getDescripcion() : String
+        +setDescripcion(descripcion : String) : void
+        +efecto(pokemon : Pokemon) : void
     }
 
     class IMedalla {
         <<interface>>
+        +getNombreMedalla() : String
+        +setNombreMedalla(name : String)
+        +getDescription() : String
+        +setDescription(description : String) : void
+    }
+    
+    class Medalla {
+        -name : String
+        -descripcion: String
+        +getNombreMedalla() : String
+        +setNombreMedalla(name : String)
+        +getDescription() : String
+        +setDescription(description : String) : void
     }
 
-    IRegion <|.. Region: ser
-    Region <-- Gimnasio: tener
-    Region <-- Pokemon: tener
-    Region <-- Profesor
-    Region <-- Entrenador
-    IGimnasio <|.. Gimnasio: ser
-    Gimnasio <-- Medalla
-    IPokemon <|.. Pokemon: ser
-    Pokemon <-- Naturaleza
-    Pokemon <-- Tipo
-    Persona <|-- IProfesor
-    IProfesor <|.. Profesor
-    Persona <|-- IEntrenador
-    IEntrenador <|.. Entrenador
-    Entrenador <-- Item
-    IItem <|.. Item
-    IMedalla <|.. Medalla
+%% Relaciones entre interfaces y clases
+    IRegion <|.. Region : ser
+    IGimnasio <|.. Gimnasio : ser
+    IPokemon <|.. Pokemon : ser
+    IItem <|.. Item : ser
+    IMedalla <|.. Medalla : ser
+
+%% Relaciones de herencia e implementación para Persona
+    Persona <|-- Profesor
+    IProfesor <|.. Profesor : implementar
+    Persona <|-- Entrenador
+    IEntrenador <|.. Entrenador : implementar
+
+%% Relaciones de composición/asociación con cardinalidades
+    Region "1" <-- "0..*" Gimnasio : tener
+    Region "1" <-- "0..*" Pokemon : tener
+    Region "1" <-- "0..*" Profesor : tener
+    Region "1" <-- "0..*" Entrenador : tener
+    Gimnasio "1" <-- "1" Medalla : tener
+    Pokemon "1" <-- "1" Naturaleza : tener
+    Pokemon "1" <-- "1" Tipo : tener
+    Entrenador "1" <-- "0..*" Item : tener
 
 ```
