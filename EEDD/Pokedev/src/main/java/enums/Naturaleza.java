@@ -1,4 +1,4 @@
-package entidades;
+package enums;
 
 public enum Naturaleza {
     AGRESIVA,

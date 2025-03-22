@@ -66,6 +66,7 @@
         +setMedalla(medalla: Medalla): void
         +getTipo(): Tipo
         +setTipo(tipo: Tipo): void
+        +batalla(Trainer trainer) : void
     }
     
     class IPokemon {
@@ -93,13 +94,13 @@
 
     class Persona {
         <<abstract>>
-        -name : String
+        #name : String
         +Persona(name : String)
         +getNombrePersona() : String
         +setNombrePersona(name : String)
     }
 
-    class IEntrenador {
+    class ITrainer {
         <<interface>>
         +getPokemons() : List<Pokemon>
         +addPokemon(pokemon : Pokemon) : void
@@ -107,9 +108,9 @@
         +batalla() : void
     }
 
-    class Entrenador {
+    class Trainer {
         -pokemons : List<Pokemon>
-        +Entranador(name : Sring)
+        +Entrenador(name : String)
         +getPokemons() : List<Pokemon>
         +addPokemon(pokemon : Pokemon) : void
         +removePokemon(pokemon : Pokemon) : void
@@ -174,11 +175,13 @@
         +setNombreMedalla(name : String)
         +getDescription() : String
         +setDescription(description : String) : void
+        +informacion() : void
     }
     
     class Medalla {
         -name : String
         -descripcion: String
+        +Medalla(name : String, descripcion : String)
         +getNombreMedalla() : String
         +setNombreMedalla(name : String)
         +getDescription() : String
@@ -195,17 +198,17 @@
 %% Relaciones de herencia e implementación para Persona
     Persona <|-- Profesor
     IProfesor <|.. Profesor : implementar
-    Persona <|-- Entrenador
-    IEntrenador <|.. Entrenador : implementar
+    Persona <|-- Trainer
+    ITrainer <|.. Trainer : implementar
 
 %% Relaciones de composición/asociación con cardinalidades
     Region "1" <-- "0..*" Gimnasio : tener
     Region "1" <-- "0..*" Pokemon : tener
     Region "1" <-- "0..*" Profesor : tener
-    Region "1" <-- "0..*" Entrenador : tener
+    Region "1" <-- "0..*" Trainer : tener
     Gimnasio "1" <-- "1" Medalla : tener
     Pokemon "1" <-- "1" Naturaleza : tener
     Pokemon "1" <-- "1" Tipo : tener
-    Entrenador "1" <-- "0..*" Item : tener
+    Trainer "1" <-- "0..*" Item : tener
 
 ```
