@@ -19,6 +19,6 @@ public interface IGimnasio {
     Tipo getTipo();
     void setTipo(Tipo tipo);
 
-    void batalla(Trainer trainer);
+    Boolean batalla(Trainer trainer);
 
 }

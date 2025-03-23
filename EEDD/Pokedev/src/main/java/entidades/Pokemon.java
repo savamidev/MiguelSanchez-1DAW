@@ -4,13 +4,20 @@ import enums.Naturaleza;
 import enums.Tipo;
 import interfaces.IPokemon;
 
+
 public class Pokemon implements IPokemon {
 
     private String name;
     private Tipo tipo;
     private Naturaleza naturaleza;
 
-
+    /**
+     * Constructor de Pokemon.
+     *
+     * @param name        nombre del Pokémon.
+     * @param tipo        tipo del Pokémon.
+     * @param naturaleza naturaleza del Pokémon.
+     */
     public Pokemon(String name, Tipo tipo, Naturaleza naturaleza) {
         this.name = name;
         this.tipo = tipo;
@@ -42,7 +49,6 @@ public class Pokemon implements IPokemon {
         return this.naturaleza;
     }
 
-
     @Override
     public void setNaturaleza(Naturaleza naturaleza) {
         this.naturaleza = naturaleza;
@@ -51,9 +57,9 @@ public class Pokemon implements IPokemon {
     @Override
     public String toString() {
         return "Pokemon{" +
-                "name='" + this.name + '\'' +
-                ", tipo=" + this.tipo +
-                ", naturaleza=" + this.naturaleza +
+                "name='" + getNamePokemon() + '\'' +
+                ", tipo=" + getTipo() +
+                ", naturaleza=" + getNaturaleza() +
                 '}';
     }
 }

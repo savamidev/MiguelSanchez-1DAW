@@ -24,12 +24,12 @@ public interface IRegion {
 
     // Gestión de pokemons
     void addPokemon(Pokemon pokemon);
-    void removePokemin(Pokemon pokemon);
+    void removePokemon(Pokemon pokemon);
     List<Pokemon> getPokemons();
 
     // Sistema de búsqueda
-    Gimnasio findGym(String name);
-    Trainer findTrainer(String name);
-    Pokemon findPokemon(String name);
+    void findGym(String name);
+    void findTrainer(String name);
+    void findPokemon(String name);
 
 }

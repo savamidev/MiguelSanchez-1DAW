@@ -2,7 +2,9 @@ package entidades;
 
 import interfaces.IRegion;
 
+import java.util.ArrayList;
 import java.util.List;
+
 
 public class Region implements IRegion {
 
@@ -11,8 +13,16 @@ public class Region implements IRegion {
     private List<Trainer> trainers;
     private List<Pokemon> pokemons;
 
+    /**
+     * Constructor de Region.
+     *
+     * @param name nombre de la región.
+     */
     public Region(String name) {
         this.name = name;
+        gyms = new ArrayList<>();
+        trainers = new ArrayList<>();
+        pokemons = new ArrayList<>();
     }
 
     @Override
@@ -27,12 +37,16 @@ public class Region implements IRegion {
 
     @Override
     public void addGym(Gimnasio gimnasio) {
-
+        if (!this.gyms.contains(gimnasio)) {
+            this.gyms.add(gimnasio);
+        }
     }
 
     @Override
     public void removeGym(Gimnasio gimnasio) {
-
+        if (this.gyms.contains(gimnasio)) {
+            this.gyms.remove(gimnasio);
+        }
     }
 
     @Override
@@ -42,12 +56,16 @@ public class Region implements IRegion {
 
     @Override
     public void addTrainer(Trainer trainer) {
-
+        if (!this.trainers.contains(trainer)) {
+            this.trainers.add(trainer);
+        }
     }
 
     @Override
     public void removeTrainer(Trainer trainer) {
-
+        if (trainers.contains(trainer)) {
+            this.trainers.remove(trainer);
+        }
     }
 
     @Override
@@ -57,12 +75,16 @@ public class Region implements IRegion {
 
     @Override
     public void addPokemon(Pokemon pokemon) {
-
+        if (!this.pokemons.contains(pokemon)) {
+            this.pokemons.add(pokemon);
+        }
     }
 
     @Override
-    public void removePokemin(Pokemon pokemon) {
-
+    public void removePokemon(Pokemon pokemon) {
+        if (this.pokemons.contains(pokemon)) {
+            this.pokemons.remove(pokemon);
+        }
     }
 
     @Override
@@ -71,27 +93,45 @@ public class Region implements IRegion {
     }
 
     @Override
-    public Gimnasio findGym(String name) {
-        return null;
+    public void findGym(String name) {
+        if (!this.gyms.isEmpty()) {
+            for (Gimnasio gym : this.gyms) {
+                if (gym.getNameGimnasio().equals(name)) {
+                    System.out.println("Gym found: " + gym.toString());
+                }
+            }
+        }
     }
 
     @Override
-    public Trainer findTrainer(String name) {
-        return null;
+    public void findTrainer(String name) {
+        if (!this.trainers.isEmpty()) {
+            for (Trainer trainer : this.trainers) {
+                if (trainer.getNamePersona().equals(name)) {
+                    System.out.println("Gym found: " + trainer.toString());
+                }
+            }
+        }
     }
 
     @Override
-    public Pokemon findPokemon(String name) {
-        return null;
+    public void findPokemon(String name) {
+        if (!this.pokemons.isEmpty()) {
+            for (Pokemon pokemon : this.pokemons) {
+                if (pokemon.getNamePokemon().equals(name)) {
+                    System.out.println("Gym found: " + pokemon.toString());
+                }
+            }
+        }
     }
 
     @Override
     public String toString() {
         return "Region{" +
                 "name='" + this.name + '\'' +
-                ", gyms=" + this.gyms +
-                ", trainers=" + this.trainers +
-                ", pokemons=" + this.pokemons +
+                ", gyms=" + this.gyms.toString() +
+                ", trainers=" + this.trainers.toString() +
+                ", pokemons=" + this.pokemons.toString() +
                 '}';
     }
 }

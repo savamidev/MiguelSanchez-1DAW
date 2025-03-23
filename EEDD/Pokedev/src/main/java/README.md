@@ -66,7 +66,7 @@
         +setMedalla(medalla: Medalla): void
         +getTipo(): Tipo
         +setTipo(tipo: Tipo): void
-        +batalla(Trainer trainer) : void
+        +batalla(Trainer trainer) : Boolean
     }
     
     class IPokemon {
@@ -106,6 +106,13 @@
         +addPokemon(pokemon : Pokemon) : void
         +removePokemon(pokemon : Pokemon) : void
         +batalla() : void
+        +capturarPokemon(pokemon : Pokemon) : void
+        +addItem(item : Item) : void
+        +getItem() : List<Item>
+        +usarITem(pokemon : Pokemon) : void
+        +addMedalla(medalla : Medalla) : void
+        +getMedallas() : List<Medalla>
+        +removeMedalla(medalla : Medalla) : void
     }
 
     class Trainer {
@@ -115,12 +122,21 @@
         +addPokemon(pokemon : Pokemon) : void
         +removePokemon(pokemon : Pokemon) : void
         +batalla() : void
+        +capturarPokemon(pokemon : Pokemon) : void
+        +addItem(item : Item) : void
+        +getItem() : List<Item>
+        +usarITem(pokemon : Pokemon) : void
+        +addMedalla(medalla : Medalla) : void
+        +getMedallas() : List<Medalla>
+        +removeMedalla(medalla : Medalla) : void
+    }
     }
 
     class IProfesor {
         <<interface>>
         +getDepartamento() : String
         +setDepartament(departamento : String) : void
+        +darPokemon(trainer : Trainer) : void
     }
 
     class Profesor {
@@ -128,6 +144,12 @@
         +Profesor(name : String, departament : String)
         +getDepartamento() : String
         +setDepartamento(departament : String) : void
+        +darPokemon(trainer : Trainer) : void
+
+    }
+
+    class FactoriaPokemon{
+        +static crearPokemon() : Pokemon
     }
 
     class Naturaleza {

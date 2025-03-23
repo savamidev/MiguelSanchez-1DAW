@@ -1,6 +1,7 @@
 package test;
 
 import entidades.Item;
+import entidades.Medalla;
 import entidades.Pokemon;
 import entidades.Trainer;
 import enums.Naturaleza;
@@ -18,18 +19,22 @@ class TrainerTest {
     private Trainer trainer;
     private List<Pokemon> pokemons;
     private List<Item> items;
+    private List<Medalla> medallas;
 
     // Variables necesarias para ejecución test
     private Pokemon pikachu;
     private Item cambiarNaturaleza;
+    private Medalla medalla;
 
     @BeforeEach
     public void setUp() {
         trainer = new Trainer("Ash");
         pokemons = trainer.getPokemons();
         items = trainer.getItems();
+        medallas = trainer.getMedallas();
         pikachu = new Pokemon("Pikachu", Tipo.ELECTRICO, Naturaleza.AUDACIOSA);
         cambiarNaturaleza = new Item("Cambio de Naturaleza", "Cambia la naturaleza del pokemon");
+        medalla = new Medalla("Medalla puerta acceso", "Medalla de prueba de acceso a la liga pokemon.");
     }
 
     @Test
@@ -60,6 +65,7 @@ class TrainerTest {
         assertTrue(items.isEmpty(), "La lista está vacía.");
         assertEquals(items, trainer.getItems());
     }
+
 
     @Test
     void batalla() {
@@ -108,6 +114,35 @@ class TrainerTest {
         trainer.addItem(cambiarNaturaleza);
         trainer.usarItem(pikachu);
         assertNotEquals(trainer.getPokemons().get(0).getNaturaleza(), pikachu.getTipo().name());
+    }
+
+    @Test
+    void addMedalla() {
+        assertNotNull(medallas, "La lista no puede ser nula.");
+        assertTrue(medallas.isEmpty(), "La lista está vacía.");
+
+        trainer.addMedalla(medalla);
+        assertEquals(1, trainer.getMedallas().size());
+        assertTrue(trainer.getMedallas().contains(medalla), "Tienes la medalla actualmente!");
+    }
+
+    @Test
+    void removeMedalla() {
+        assertNotNull(medallas, "La lista no puede ser nula.");
+        assertTrue(medallas.isEmpty(), "La lista está vacía.");
+
+        trainer.addMedalla(medalla);
+        trainer.removeMedalla(medalla);
+        assertEquals(0, trainer.getMedallas().size());
+        assertFalse(trainer.getMedallas().contains(medalla), "No tienes la medalla actualmente!");
+    }
+
+
+    @Test
+    void getMedallas() {
+        assertNotNull(medallas, "La lista no puede ser nula.");
+        assertTrue(medallas.isEmpty(), "La lista está vacía.");
+        assertEquals(medallas, trainer.getMedallas());
     }
 
     @Test

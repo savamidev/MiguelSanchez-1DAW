@@ -7,15 +7,23 @@ import interfaces.ITrainer;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Trainer extends Persona implements ITrainer {
 
     private List<Pokemon> pokemons;
     private List<Item> items;
+    private List<Medalla> medallas;
 
+    /**
+     * Constructor de Trainer.
+     *
+     * @param name nombre del entrenador.
+     */
     public Trainer(String name) {
         super(name);
         this.pokemons = new ArrayList<>();
         this.items = new ArrayList<>();
+        this.medallas = new ArrayList<>();
     }
 
     @Override
@@ -34,14 +42,40 @@ public class Trainer extends Persona implements ITrainer {
 
     @Override
     public void removePokemon(Pokemon pokemon) {
-       pokemons.remove(pokemon);
+        pokemons.remove(pokemon);
     }
 
     public List<Item> getItems() {
         return this.items;
     }
 
+    @Override
+    public void addItem(Item item) {
+        if (item != null && !this.pokemons.contains(item)) {
+            this.items.add(item);
+            System.out.println("Se ha añadido el item.");
+        }
+    }
 
+
+    @Override
+    public void usarItem(Pokemon pokemon) {
+        if (pokemon != null) {
+            if (items.isEmpty()) {
+                System.out.println("No tienes items para usar.");
+            } else {
+                System.out.println("Usando item: " + items.get(0).getNombreItem());
+                items.get(0).efecto(pokemon);
+            }
+        }
+    }
+
+    /**
+     * Simula una batalla entre el primer Pokemon del entrenador y un Pokémon enemigo.
+     *
+     * @param pokemonEnemigo el Pokémon enemigo al que se enfrenta.
+     * @return true si se gana la batalla, false en caso contrario.
+     */
     @Override
     public Boolean batalla(Pokemon pokemonEnemigo) {
         if (pokemons.isEmpty()) {
@@ -91,12 +125,18 @@ public class Trainer extends Persona implements ITrainer {
         return victoria;
     }
 
+    /**
+     * Intenta capturar un Pokemon basándose en un valor aleatorio.
+     *
+     * @param pokemon el Pokemon que se intenta capturar.
+     * @return true si la captura es exitosa, false en caso contrario.
+     */
     @Override
     public Boolean capturarPokemon(Pokemon pokemon) {
-        // Genera una suerte aleatorio entre 0.0 y 1.0
+        // Genera un valor aleatorio entre 0.0 y 1.0
         double suerte = Math.random();
 
-        // Definimos un umbral de captura, por ejemplo 0.5 (50% de probabilidad)
+        // Definimos un umbral de captura (por ejemplo, 0.3, lo que equivale al 30% de probabilidad)
         double umbral = 0.3;
 
         if (suerte < umbral) {
@@ -104,32 +144,32 @@ public class Trainer extends Persona implements ITrainer {
             System.out.println("¡Capturaste a " + pokemon.getNamePokemon() + "!");
             return true;
         } else {
-            // No se captura el Pokémon, se retorna false
             System.out.println("No lograste capturar a " + pokemon.getNamePokemon() + ".");
             return false;
         }
     }
 
+
     @Override
-    public void addItem(Item item) {
-        if (item != null && !this.pokemons.contains(item)) {
-            this.items.add(item);
-            System.out.println("Se ha añadido el item.");
+    public void addMedalla(Medalla medalla) {
+        if (medallas != null) {
+            this.medallas.add(medalla);
+            System.out.println("Se ha añadido la medalla.");
         }
     }
 
     @Override
-    public void usarItem(Pokemon pokemon) {
-        if(pokemon != null){
-            if (items.isEmpty()) {
-                System.out.println("No tienes items para usar.");
-            } else {
-                System.out.println("Usando item: " + items.get(0).getNombreItem() );
-                items.get(0).efecto(pokemon);
-            }
-        }
+    public List<Medalla> getMedallas() {
+        return this.medallas;
     }
 
+
+    @Override
+    public void removeMedalla(Medalla medalla) {
+        if (medallas != null && medallas.contains(medalla)) {
+            this.medallas.remove(medalla);
+        }
+    }
 
     @Override
     public String toString() {

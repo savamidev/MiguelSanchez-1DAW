@@ -2,11 +2,18 @@ package entidades;
 
 import interfaces.IMedalla;
 
+
 public class Medalla implements IMedalla {
 
     private String name;
     private String descripcion;
 
+    /**
+     * Constructor de Medalla.
+     *
+     * @param name        nombre de la medalla.
+     * @param descripcion descripción de la medalla.
+     */
     public Medalla(String name, String descripcion) {
         this.name = name;
         this.descripcion = descripcion;

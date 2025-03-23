@@ -45,6 +45,8 @@ class ItemTest {
 
     @Test
     void efecto() {
+        item.efecto(pikachu);
+        assertNotEquals(Naturaleza.AUDACIOSA, pikachu.getNaturaleza());
     }
 
     @Test

@@ -10,6 +10,12 @@ public class Item implements IItem {
     private String name;
     private String descripcion;
 
+    /**
+     * Constructor de Item.
+     *
+     * @param name        nombre del item.
+     * @param descripcion descripción del item.
+     */
     public Item(String name, String descripcion) {
         this.name = name;
         this.descripcion = descripcion;
@@ -35,6 +41,13 @@ public class Item implements IItem {
         this.descripcion = descripcion;
     }
 
+    /**
+     * Aplica un efecto sobre un Pokemon cambiando su naturaleza.
+     * <p>
+     * Se selecciona una naturaleza aleatoria distinta a la actual del Pokémon.
+     *
+     * @param pokemon el Pokemon al que se aplicará el efecto.
+     */
     @Override
     public void efecto(Pokemon pokemon) {
         Random random = new Random();
@@ -49,8 +62,6 @@ public class Item implements IItem {
 
         pokemon.setNaturaleza(nuevaNaturaleza);
     }
-
-
 
     @Override
     public String toString() {
