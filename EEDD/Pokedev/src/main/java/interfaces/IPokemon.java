@@ -11,6 +11,6 @@ public interface IPokemon {
     Tipo getTipo();
     void setTipo(Tipo tipo);
 
-    Naturaleza getNatuleza();
+    Naturaleza getNaturaleza();
     void setNaturaleza(Naturaleza naturaleza);
 }

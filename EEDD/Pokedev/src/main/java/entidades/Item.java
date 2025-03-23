@@ -1,6 +1,9 @@
 package entidades;
 
+import enums.Naturaleza;
 import interfaces.IItem;
+
+import java.util.Random;
 
 public class Item implements IItem {
 
@@ -34,8 +37,20 @@ public class Item implements IItem {
 
     @Override
     public void efecto(Pokemon pokemon) {
+        Random random = new Random();
+        Naturaleza[] valores = Naturaleza.values();
 
+        int randomNatu;
+        Naturaleza nuevaNaturaleza;
+        do {
+            randomNatu = random.nextInt(valores.length);
+            nuevaNaturaleza = valores[randomNatu];
+        } while (nuevaNaturaleza.equals(pokemon.getNaturaleza()));
+
+        pokemon.setNaturaleza(nuevaNaturaleza);
     }
+
+
 
     @Override
     public String toString() {

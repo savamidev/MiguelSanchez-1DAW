@@ -207,8 +207,6 @@
     Region "1" <-- "0..*" Profesor : tener
     Region "1" <-- "0..*" Trainer : tener
     Gimnasio "1" <-- "1" Medalla : tener
-    Pokemon "1" <-- "1" Naturaleza : tener
-    Pokemon "1" <-- "1" Tipo : tener
     Trainer "1" <-- "0..*" Item : tener
 
 ```

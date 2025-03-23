@@ -1,5 +1,6 @@
 package interfaces;
 
+import entidades.Item;
 import entidades.Pokemon;
 
 import java.util.List;
@@ -10,5 +11,9 @@ public interface ITrainer {
     void addPokemon(Pokemon pokemon);
     void removePokemon(Pokemon pokemon);
 
-    void batalla();
+    Boolean batalla(Pokemon pokemon);
+    Boolean capturarPokemon(Pokemon pokemon);
+
+    void addItem(Item item);
+    void usarItem(Pokemon pokemon);
 }

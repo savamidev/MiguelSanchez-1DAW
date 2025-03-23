@@ -38,9 +38,10 @@ public class Pokemon implements IPokemon {
     }
 
     @Override
-    public Naturaleza getNatuleza() {
+    public Naturaleza getNaturaleza() {
         return this.naturaleza;
     }
+
 
     @Override
     public void setNaturaleza(Naturaleza naturaleza) {

@@ -1,5 +1,6 @@
-package entidades;
+package test;
 
+import entidades.Profesor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
