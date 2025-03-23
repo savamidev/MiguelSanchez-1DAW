@@ -130,7 +130,7 @@
         +getMedallas() : List<Medalla>
         +removeMedalla(medalla : Medalla) : void
     }
-    }
+    
 
     class IProfesor {
         <<interface>>
