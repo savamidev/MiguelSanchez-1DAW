@@ -8,7 +8,7 @@ let cantidadDinero = 999;
 
 while(cantidadDinero > 0) {
 
-numBilletes[i] = ((cantidadDinero / moneyArray[i]) > 0) ? cantidadDinero / numBilletes[i] : 0;
+numBilletes[i] = (cantidadDinero - (cantidadDinero % moneyArray[i])) / moneyArray[i];
 
 cantidadDinero = cantidadDinero - (numBilletes[i] * moneyArray[i]);
 
