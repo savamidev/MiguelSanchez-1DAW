@@ -14,7 +14,7 @@ if (monos.length == bananas.length) {
 
 } else {
     let minComida = Math.floor(bananas.length / monos.length);
-    let resto = Math.floor(bananas.length / monos.length);
+    let resto = bananas.length % monos.length;
 
     addComida(minComida, resto);
     let message = creatorMessage("");
