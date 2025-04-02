@@ -10,7 +10,7 @@ console.log(
 function calcSumCard() {
     let sumNumCard = 0;
     
-    for (let i = (card.length - 1); i > 0; i--) {
+    for (let i = (card.length - 1); i >= 0; i--) {
         if (i % 2 == 0 && card[i] != 0) {
             sumNumCard += ((card[i] * 2) > 9 ? (card[i] * 2) - 9 : card[i] * 2);
         }
