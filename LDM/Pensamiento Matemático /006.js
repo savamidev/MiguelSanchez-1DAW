@@ -3,7 +3,6 @@
 let numCard = prompt("Enter your card number: (XXXX-XXXX-XXXX-XXXX)").replace(/-/g, "");
 let card = numCard.split("").map(Number);
 
-alert(calcSumCard());
 console.log(
     (calcSumCard() % 10 === 0) ? "Valid card number" : "Invalid card number"
 );
@@ -24,7 +23,7 @@ function calcSumCard() {
 
         sumNumCard += num;
     }
-    
+
     return sumNumCard;
 }
 
