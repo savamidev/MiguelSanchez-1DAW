@@ -3,18 +3,28 @@
 let numCard = prompt("Enter your card number: (XXXX-XXXX-XXXX-XXXX)").replace(/-/g, "");
 let card = numCard.split("").map(Number);
 
+alert(calcSumCard());
 console.log(
-    (calcSumCard() % 10 == 0) ? "Valid card number" : "Invalid card number"
+    (calcSumCard() % 10 === 0) ? "Valid card number" : "Invalid card number"
 );
 
 function calcSumCard() {
     let sumNumCard = 0;
     
     for (let i = (card.length - 1); i >= 0; i--) {
-        if (i % 2 == 0 && card[i] != 0) {
-            sumNumCard += ((card[i] * 2) > 9 ? (card[i] * 2) - 9 : card[i] * 2);
+        
+        let num;
+
+        if (i % 2 === 0) {
+            num = (card[i] * 2 < 9) ? (card[i] * 2) : ((card[i] * 2) - 9)
+        
+        } else {
+            num = card[i];
         }
+
+        sumNumCard += num;
     }
+    
     return sumNumCard;
 }
 
