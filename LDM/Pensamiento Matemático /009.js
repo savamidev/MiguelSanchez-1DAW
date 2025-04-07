@@ -52,11 +52,6 @@ function playGameRound() {
 }
 
 
-
-
-
-
-
 function playGameInfity() {
     
     let win = true;
