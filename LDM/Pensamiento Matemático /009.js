@@ -32,7 +32,7 @@ function playGame() {
 
 
 function showMessage (result, round) {
-    (result == true) ? alert(`Your win, round ${round}`) : alert(`You lost, round ${round}`)
+    (result == true) ? alert(`Your win, round ${round}`) : alert(`You lost, your have survived ${round}`)
 }
 
 
