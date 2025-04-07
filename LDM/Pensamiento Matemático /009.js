@@ -5,11 +5,59 @@ const COLOR = ["red🔴","blue🔵", "green🟢", "yellow🟡"]
 let userOption;
 let loop = 1;
 
-playGame();
+
+
+runGame();
+
+
+function runGame() {
+
+    let optionMenu = +prompt("Select game mode: \n1) InfityMode.\n2)Number roud to win. ")
+
+    switch (optionMenu) {
+        case 1:
+            playGameInfity();
+            break;
+
+        case 2:
+            playGameRound();
+            break;    
+    }
+
+    alert("Thanks to play!")
+}
+
+
+function playGameRound() {
+    
+    let win = true;
+    let round = +prompt("How many rounds do you want to play?"); 
+    let roundPlay = 0;
+    
+    while (win == true && round > 0) {
+
+        let sequence = generateSequenceColor();
+
+        alert(sequence);
+        
+        userOption = prompt("Enter the color sequence:").toLowerCase();
+
+        win = (userOption == sequence) ? true : false;
+
+        showMessage(win, roundPlay);
+
+        round--;
+        roundPlay++;
+    }
+}
 
 
 
-function playGame() {
+
+
+
+
+function playGameInfity() {
     
     let win = true;
     let round = 1; 
