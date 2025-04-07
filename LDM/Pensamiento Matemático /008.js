@@ -15,7 +15,7 @@ luckyGame();
 function luckyGame() {
 
     do {
-        userOption = prompt("Introduce cara, cruz o salir:")
+        userOption = prompt("Enter cara, cruz o salir:")
 
         playGame();
 
