@@ -1,4 +1,5 @@
 "use strict";
+
 let optionUser;
 let isGameFinish = false;
 
@@ -28,7 +29,7 @@ function runGame() {
     showStatusLife();
 
     checkGameStatus();
-    
+
   } while (optionUser != 4 && isGameFinish == false);
 
   console.log(
