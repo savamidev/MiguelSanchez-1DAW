@@ -1,5 +1,8 @@
 "use strict"
 
+
+// reorganizar la verificación  
+
 let numCard = prompt("Enter your card number: (XXXX-XXXX-XXXX-XXXX)").replace(/\D/g, "");
 let card = numCard.split("").map(Number);
 
