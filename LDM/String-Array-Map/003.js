@@ -34,10 +34,4 @@ let cocoFind = disney.find(personaje => personaje.nombre === "Cocodrilo");
 console.log(`Datos buscados: ${cocoFind.nombre}`);
 
 
-function shuffle() {
-   disney.sort();
-}
-
-shuffle();
-
 disney.forEach(personaje => console.log(personaje));
