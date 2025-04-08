@@ -1,12 +1,10 @@
 "use strict"
 
-// Modificar el tema de sobre la longitud del numero de la tarjeta 
-
 let numCard = prompt("Enter your card number: (XXXX-XXXX-XXXX-XXXX)").replace(/-/g, "");
 let card = numCard.split("").map(Number);
 
 console.log(
-    (calcSumCard() % 10 === 0) ? "Valid card number" : "Invalid card number"
+    (calcSumCard() % 10 === 0 && card.length == 16) ? "Valid card number" : "Invalid card number"
 );
 
 function calcSumCard() {
