@@ -4,9 +4,15 @@ let numCard = prompt("Enter your card number: (XXXX-XXXX-XXXX-XXXX)").replace(/-
 let card = numCard.split("").map(Number);
 
 console.log(
-    (calcSumCard() % 10 === 0 && card.length == 16) ? "Valid card number" : "Invalid card number"
+    (card.length === 16) ? (calcSumCard() % 10 === 0) ? "Card is correct" : "Card invalid composition." : "Error length."
 );
 
+
+/**
+ * Calcula la suma de los dígitos de la tarjeta según el algoritmo de Luhn.
+ *
+ * @returns {number} La suma total calculada de los dígitos de la tarjeta.
+ */
 function calcSumCard() {
     let sumNumCard = 0;
     
