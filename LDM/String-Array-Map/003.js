@@ -14,24 +14,33 @@ let disney = [
  
  ];
  
+ //Meter a Peter Pan al final del array disney.
 disney.push({ nombre: "Peter Pan", pelicula: "Peter Pan" });
 console.log(disney);
 
+//Pintar el array
+console.log(disney);
+
+//Meter a El capitán Garfio al principio del array, no olvides la película
 disney.unshift({ nombre: "Capitán Garfio", pelicula: "Peter Pan" });
 console.log(disney);
 
+//Meter al cocodrilo detrás del capitán, no olvides la película
 disney.splice(1, 0, { nombre: "Cocodrilo", pelicula: "Peter Pan"});
 console.log(disney);
 
+//Obtener los personajes de la película de "Peter Pan"; y mostrarlos uno a uno.
 disney.forEach((item) => {
     console.log(item)
 });
 
+//Encontrar el índice de Campanilla.
 let indice = disney.findIndex(personaje => personaje.nombre === "Campanilla")
 console.log(`El índice de Campanilla es ${indice}`);
 
+//Buscar al cocodrilo.
 let cocoFind = disney.find(personaje => personaje.nombre === "Cocodrilo");
 console.log(`Datos buscados: ${cocoFind.nombre}`);
 
-
+//Escribe la función shuffle(array) que baraje (reordene de forma aleatoria) los elementos del array.
 disney.forEach(personaje => console.log(personaje));
