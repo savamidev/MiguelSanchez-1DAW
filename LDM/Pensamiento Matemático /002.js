@@ -1,20 +1,21 @@
 "use strict"
 
-// Use 🐵 to monkey and 🍌 to banana
+// Ejemplo de lista insertada.
 let monkeyBanana = ["🐵", "🍌", "🐵", "🍌", "🍌", "🍌", "🐵", "🍌", "🍌", "🍌", "🍌", "🍌", "🐵", "🍌", "🍌", "🍌", "🍌", "🍌", "🐵"];
 
 let monkey = calcNumMonkey();
 
 let banana = calcNumBanana();
 
-// Calculate the number of monkeys and bananas to eat
+// Calculamos el número mínimo de bananas que come cada mono.
 let minBananasMonkey = Math.floor(banana / monkey);
+// Calculamos las bananas restantes a repartir.
 let restBananas = banana % monkey;
 
 showMessage();
 
 
-// Function to calculate the number of monkeys and bananas
+// Calculo de número de monos existentes en el array.
 function calcNumMonkey() {
     let numberOfMonkeys = 0;
     monkeyBanana.forEach((item) => {
@@ -27,6 +28,7 @@ function calcNumMonkey() {
 }
 
 
+// Calculo de número de bananas existentes en el array.
 function calcNumBanana() {
     let numberOfBananas = 0;
     monkeyBanana.forEach((item) => {
@@ -38,15 +40,23 @@ function calcNumBanana() {
     return numberOfBananas;
 }
 
+
+// Construcción del resultado final, comprobando si existen suficientes bananas para los monos.
 function showMessage() {
     let message = "";
 
-    for (let i = 0; i < monkey; i++) {
-        if (i < restBananas) {
-            message += `🐵${("🍌").repeat(restBananas + minBananasMonkey)}`
-        } else {
-            message += `🐵${("🍌").repeat(minBananasMonkey)}`
+    if (monkey <= banana) {
+
+        for (let i = 0; i < monkey; i++) {
+            if (i < restBananas) {
+                message += `🐵${("🍌").repeat(1 + minBananasMonkey)}`
+            } else {
+                message += `🐵${("🍌").repeat(minBananasMonkey)}`
+            }
         }
+    
+    } else {
+        message = `No hay suficientes bananas ${banana}, para los monos ${monkey}`;
     }
     console.log(message);
 }
