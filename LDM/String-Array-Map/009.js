@@ -1,6 +1,6 @@
 "use strict";
 
-const years = ["Primer año", "Segundo año", "Tercer año", "Cuarto año"];
+const years = ["primer año", "segundo año", "tercer año", "cuarto año"];
 
 const howgwartsStudent = {
   nombre: "Hermione Granger",
@@ -46,7 +46,7 @@ function printHogwartsStudent(student) {
   console.log(
     `${student.nombre} es una estudiante de ${student.casa} en su ${
       years[student.año - 1]
-    } año. Tiene una mascota llamada ${student.mascota} y su patronus es una ${
+    }. Tiene una mascota llamada ${student.mascota} y su patronus es una ${
       student.patronus
     }. Sus asignaturas son: ${student.asignaturas.join(", ")}.`
   );
