@@ -12,11 +12,11 @@ let longitudArray = (array) => array.length;
 console.log(longitudArray(arrayElements));
 
 // Obtenga el primer elemento, el elemento del medio y el último elemento de un array.
-let middlePosition = Math.floor(longitudArray(arrayElements) * 0.5); // IMPORTANTE: USO DE . NO DE , 😜
+let middlePosition = (array) => Math.floor(longitudArray(arrayElements) * 0.5); // IMPORTANTE: USO DE . NO DE , 😜
 
 function showValueArray(array) {
   array.forEach((element, index) => {
-    if (index === 0 || index === middlePosition || index === array.length - 1) {
+    if (index === 0 || index === middlePosition(array) || index === array.length - 1) {
       console.log(`Elemento en la posición ${index}: ${element}`);
     }
   });
@@ -114,9 +114,37 @@ console.log(itCompanies.slice(0, 3));
 console.log(itCompanies.slice(0, (itCompanies.length - 3)));
 
 // Cortar la empresa o empresas intermedias de TI del array
+function eliminarIntermedias(array) {
+    if (array.length <= 2) {
+        return array;
+    } else {
+        let arrayAux = [];
+        array.forEach((item, index) => {
+            if (index != 0 && index != (array.length - 1)) {
+                arrayAux.push(item);
+            }
+        });
+
+        return arrayAux;
+    }
+}
+
+let arrayTI = eliminarIntermedias(itCompanies);
+console.log(arrayTI);
 
 
 // Eliminar la primera empresa de TI del array
+itCompanies.shift();
+console.log(itCompanies);
+
 // Eliminar la empresa o empresas intermedias de TI del array
+itCompanies.splice(1, (itCompanies.length - 2));
+console.log(itCompanies);
+
 // Elimine la última empresa de TI del array
+itCompanies.pop();
+console.log(itCompanies);
+
 // Eliminar todas las empresas de TI
+itCompanies = [];
+console.log(itCompanies);
