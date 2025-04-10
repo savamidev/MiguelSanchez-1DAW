@@ -43,4 +43,16 @@ let cocoFind = disney.find(personaje => personaje.nombre === "Cocodrilo");
 console.log(`Datos buscados: ${cocoFind.nombre}`);
 
 //Escribe la función shuffle(array) que baraje (reordene de forma aleatoria) los elementos del array.
-disney.forEach(personaje => console.log(personaje));
+
+/**
+ * 
+ * Esta función desordena el array como parámetro de entrada.
+ * Uso de sort() para ordenar, pero le pasamos una generación de número ramdom. Si el ramdon es positivo
+ * la segunda posición de comparación pasa a ser la primera, si es negativo las posiciones no se alteran.
+ * 
+ * @param {object} array 
+ * @returns valores negativos o positivos entre el -0.5 al 0.5
+ */
+function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
