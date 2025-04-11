@@ -2,7 +2,15 @@
 
 const years = ["primer año", "segundo año", "tercer año", "cuarto año"];
 
-function HogwartsStudent(nombre, casa, mascota, asignaturas, año, sangre, prefecto) {
+function HogwartsStudent(
+  nombre,
+  casa,
+  mascota,
+  asignaturas,
+  año,
+  sangre,
+  prefecto
+) {
   this.nombre = nombre;
   this.casa = casa;
   this.mascota = mascota;
@@ -10,9 +18,9 @@ function HogwartsStudent(nombre, casa, mascota, asignaturas, año, sangre, prefe
   this.año = año;
   this.sangre = sangre;
   this.prefecto = prefecto;
-};
+}
 
-var hermione = new HogwartsStudent(
+let hermione = new HogwartsStudent(
   "Hermione Granger",
   "Gryffindor",
   "Crookshanks",
@@ -22,37 +30,46 @@ var hermione = new HogwartsStudent(
   true
 );
 
-
 // Mostramos los atributos de nombre, casa y mascota
 console.log(
-  `Nombre: ${howgwartsStudent.nombre}, Casa: ${howgwartsStudent.casa}, Mascota: ${howgwartsStudent.mascota}`
+  `Nombre: ${hermione.nombre}, Casa: ${hermione.casa}, Mascota: ${hermione.mascota}`
 );
 
 // Añadimos una nueva propiedad llamada patronus y le asignamos un valor "Nutria"
-howgwartsStudent.patronus = "Nutria";
+hermione.patronus = "Nutria";
 
 // Agregamos una nueva asignatura a la lista de asignaturas "Defensa contra las Artes Oscuras"
-howgwartsStudent.asignaturas.push("Defensa contra las Artes Oscuras");
+hermione.asignaturas.push("Defensa contra las Artes Oscuras");
 
 // Cambiar el valor de la propiedad año a 4
-howgwartsStudent.año = 4;
+hermione.año = 4;
 
 // Eliminar la propiedad sangre del objeto
-delete howgwartsStudent.sangre;
+delete hermione.sangre;
 
 //Crea una función printHogwartsStudent que reciba el objeto hogwartsStudent y muestre por consola un resumen como este:
 //Hermione Granger es una estudiante de Gryffindor en su cuarto año. Tiene una mascota llamada Crookshanks y su patronus es una Nutria. Sus asignaturas son: Pociones, Transformaciones, Encantamientos, Defensa Contra las Artes Oscuras.
-function printHogwartsStudent(student) {
+function printHogwartsStudent(objeto) {
   console.log(
-    `${student.nombre} es una estudiante de ${student.casa} en su ${
-      years[student.año - 1]
-    }. Tiene una mascota llamada ${student.mascota} y su patronus es una ${
-      student.patronus
-    }. Sus asignaturas son: ${student.asignaturas.join(", ")}.`
+    `${objeto.nombre} es una estudiante de ${objeto.casa} en su ${
+      years[objeto.año - 1]
+    }.Tiene una mascota llamada ${objeto.mascota} y su patronus es una ${
+      objeto.patronus
+    }.Sus asignaturas son: ${objeto.asignaturas.join(", ")}.`
   );
 }
 
-printHogwartsStudent(howgwartsStudent);
-printHogwartsStudent(howgwartsStudent2);
+printHogwartsStudent(hermione);
 
+//Invoca la función printHogwartsStudent() con el objeto modificado.
+let ginnyWeasley = new HogwartsStudent(
+  "Ginny Weasly",
+  "Gryffindor",
+  "Arnold",
+  ["Encantamientos", "Vuelo", "Pociones", "Defensa contra las Artes Oscuras"],
+  4,
+  "pura",
+  true
+);
 
+printHogwartsStudent(ginnyWeasley);
