@@ -2,26 +2,26 @@
 
 const years = ["primer año", "segundo año", "tercer año", "cuarto año"];
 
-const howgwartsStudent = {
-  nombre: "Hermione Granger",
-  casa: "Gryffindor",
-  mascota: "Crookshanks",
-  asignaturas: ["Pociones", "Transformaciones", "Encantamientos"],
-  año: 3,
-  sangre: "mestiza",
-  prefecto: true,
+function HogwartsStudent(nombre, casa, mascota, asignaturas, año, sangre, prefecto) {
+  this.nombre = nombre;
+  this.casa = casa;
+  this.mascota = mascota;
+  this.asignaturas = asignaturas;
+  this.año = año;
+  this.sangre = sangre;
+  this.prefecto = prefecto;
 };
 
-const howgwartsStudent2 = {
-  nombre: "Ginny Weasley",
-  casa: "Gryffindor",
-  mascota: "Arnol",
-  asignaturas: ["Encantamientos", "Vuelo", "Pociones", "Defensa contra las Artes Oscuras"],
-  año: 3,
-  sangre: "mestiza",
-  prefecto: true,
-  patrunus: "Caballo"
-};
+var hermione = new HogwartsStudent(
+  "Hermione Granger",
+  "Gryffindor",
+  "Crookshanks",
+  ["Pociones", "Transformaciones", "Encantamientos"],
+  3,
+  "mestiza",
+  true
+);
+
 
 // Mostramos los atributos de nombre, casa y mascota
 console.log(
