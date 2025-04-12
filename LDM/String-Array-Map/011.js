@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 class CursoOnline {
   constructor(nombre, especialidad, duracion) {
@@ -112,14 +112,18 @@ class CursoOnline {
   vaciarEstudiantes() {
     let confirmation = prompt(
       "Por seguridad, desea eliminar la lista de estudiantes? (Si o no)",
-      no
+      "no"
     );
 
-    if (confirmation.toLowerCase === si) {
+    if (confirmation.toLowerCase() === "si") {
       this.estudiantes.clear();
-      console.log(`El curso "${this.nombre}" ha sido vaciado.`);
+      console.log(`El curso "${this.nombre}" ha sido borrado correctamente.`);
+    
+    } else {
+      console.log(`Operación cancelada. El curso "${this.nombre}" conserva sus estudiantes.`);
     }
   }
+}
 
-  
+
 }
