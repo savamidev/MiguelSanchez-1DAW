@@ -14,9 +14,19 @@ console.log(longitudArray(arrayElements));
 // Obtenga el primer elemento, el elemento del medio y el último elemento de un array.
 let middlePosition = (array) => Math.floor(longitudArray(arrayElements) * 0.5); // IMPORTANTE: USO DE . NO DE , 😜
 
+/**
+ * Calcula la posición media de un array.
+ *
+ * @param {Array} array - El array del cual se calculará la posición media.
+ * @returns {number} La posición media del array.
+ */
 function showValueArray(array) {
   array.forEach((element, index) => {
-    if (index === 0 || index === middlePosition(array) || index === array.length - 1) {
+    if (
+      index === 0 ||
+      index === middlePosition(array) ||
+      index === array.length - 1
+    ) {
       console.log(`Elemento en la posición ${index}: ${element}`);
     }
   });
@@ -87,6 +97,13 @@ let arrayMaxO = (array) => {
   return arrayAux;
 };
 
+/**
+ * Cuenta cuántas veces aparece un carácter en una cadena.
+ *
+ * @param {string} item - La cadena en la que se buscará el carácter.
+ * @param {string} caracter - El carácter que se contará en la cadena.
+ * @returns {boolean} Devuelve true si el carácter aparece más de una vez, false en caso contrario.
+ */
 function countO(item) {
   let letras = item.split("");
   let contador = 0;
@@ -111,34 +128,41 @@ console.log(itCompanies.reverse());
 console.log(itCompanies.slice(0, 3));
 
 // Cortar las últimas 3 empresas del array
-console.log(itCompanies.slice(0, (itCompanies.length - 3)));
+console.log(itCompanies.slice(0, itCompanies.length - 3));
 
 // Cortar la empresa o empresas intermedias de TI del array
-function eliminarIntermedias(array) {
-    if (array.length <= 2) {
-        return array;
-    } else {
-        let arrayAux = [];
-        array.forEach((item, index) => {
-            if (index != 0 && index != (array.length - 1)) {
-                arrayAux.push(item);
-            }
-        });
 
-        return arrayAux;
-    }
+/**
+ * Elimina los elementos intermedios de un array, dejando solo el primer y el último.
+ *
+ * @param {Array} array - Array del cual se eliminarán los elementos intermedios.
+ * @returns {Array} Un nuevo array que contiene solo el primer y el último elemento.
+ */
+function eliminarIntermedias(array) {
+  if (array.length <= 2) {
+    return array;
+
+  } else {
+    let arrayAux = [];
+    array.forEach((item, index) => {
+      if (index != 0 && index != array.length - 1) {
+        arrayAux.push(item);
+      }
+    });
+
+    return arrayAux;
+  }
 }
 
 let arrayTI = eliminarIntermedias(itCompanies);
 console.log(arrayTI);
-
 
 // Eliminar la primera empresa de TI del array
 itCompanies.shift();
 console.log(itCompanies);
 
 // Eliminar la empresa o empresas intermedias de TI del array
-itCompanies.splice(1, (itCompanies.length - 2));
+itCompanies.splice(1, itCompanies.length - 2);
 console.log(itCompanies);
 
 // Elimine la última empresa de TI del array
