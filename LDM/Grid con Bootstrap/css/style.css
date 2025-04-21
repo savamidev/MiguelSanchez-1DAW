@@ -1,0 +1,81 @@
+:root {
+    --h-content: 40px;
+    --oneColor: #0e6dfc;
+    --twoColor: #11cbf1;
+    --threeColor: #dc3543;
+    --fourColor: #1a8753;
+    --fiveColor: #ffc109;
+    --sixColor: #6a757e;
+    --sevenColor: #202529;
+    --eightColor: #f7f9fa;
+    --nineColor: #0e6dfb;
+    --tenColor: #ffc0ca;
+    --elevenColor: #dda0de;
+    --twelveColor: #801b7f;
+    --thirteenColor: #6397ed;
+    --fourteenColor: #23cbd0;
+}
+
+.f-color {
+    color: var(--eightColor)
+}
+
+.b-size {
+    height: var(--h-content);
+}
+
+.bg-one {
+    background-color: var(--oneColor);
+}
+
+.bg-two {
+    background-color: var(--twoColor);
+}
+
+.bg-three {
+    background-color: var(--threeColor);
+}
+
+.bg-four {
+    background-color: var(--fourColor);
+}
+
+.bg-five {
+    background-color: var(--fiveColor);
+}
+
+.bg-six {
+    background-color: var(--sixColor);
+}
+
+.bg-seven {
+    background-color: var(--sevenColor);
+}
+
+.bg-eight {
+    background-color: var(--eightColor);
+}
+
+.bg-nine {
+    background-color: var(--nineColor);
+}
+
+.bg-ten {
+    background-color: var(--tenColor);
+}
+
+.bg-eleven {
+    background-color: var(--elevenColor);
+}
+
+.bg-twelve {
+    background-color: var(--twelveColor);
+}
+
+.bg-thirteen {
+    background-color: var(--thirteenColor);
+}
+
+.bg-fourteen {
+    background-color: var(--fourteenColor);
+}
