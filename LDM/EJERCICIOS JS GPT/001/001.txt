@@ -1,0 +1,11 @@
+1. Profundizador de Arrays
+Objetivo: Escribe una función flatten(arr) que reciba un array que puede contener elementos o sub‑arrays a cualquier profundidad, y devuelva un array “plano” con todos los valores en el orden original.
+
+js
+Copiar
+Editar
+flatten([1, [2, [3, 4], 5], 6]); 
+// → [1, 2, 3, 4, 5, 6]
+Pistas: Usa recursión; comprueba si cada elemento es un Array con Array.isArray().
+
+Reto extra: Hazlo sin recursión (pila manual).
