@@ -207,7 +207,19 @@ let reliquiaAntigua = new Reliquia(
 //Llama a amuleto.activar() y comprueba que funciona.
 
 
+let baseMagica = {
+    activar () {
+        return `Activando ${this.nombre}...`;
+    }
+};
 
+
+let objetoAmuleto = Object.create(baseMagica);
+
+objetoAmuleto.nombre = "Amuleto Sol Radiante";
+objetoAmuleto.poder = "Llamarada para romper escudos de matel lunar";
+
+console.log(objetoAmuleto.activar());
 
 //f) Colección y análisis
 //Junta todos los objetos anteriores en un array  bestiario = […].
