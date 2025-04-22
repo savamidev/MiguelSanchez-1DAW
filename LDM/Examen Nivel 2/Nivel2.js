@@ -224,12 +224,55 @@ console.log(objetoAmuleto.activar());
 //f) Colección y análisis
 //Junta todos los objetos anteriores en un array  bestiario = […].
 
+let bestiario = [
+    varitaLiteral,
+    pocionSubirVida,
+    pocionAumentaAtaque,
+    capaInvisivilidad,
+    escoba,
+    reliquiaAntigua,
+    objetoAmuleto    
+];
+
 //Usa un Map para construir un mapeo de nombre → objeto (clave: nombre de cada objeto).
 
+let mapeo = new Map();
+
+function addValueMap(array, map) {
+    array.forEach(item => {
+        map.set(item.nombre)
+    });
+};
+
+addValueMap(bestiario, mapeo);
+
+console.log(mapeo);
+
 //Usa un Set para obtener la lista de todos los “niveles” o “rareza” (la propiedad numérica o de texto que indique fuerza/rango) únicos de tu bestiario.
+
+let unicos = new Set();
+
+function addValueSet(array, set) {
+    array.forEach(item => {
+        if (item.nivel !== undefined) set.add(item.nivel);
+        if (item.rareza !== undefined) set.add(item.rareza);
+        if (item.nivelMagico !== undefined) set.add(item.nivelMagico);
+    });
+};
+
+addValueSet(bestiario, unicos);
+
 
 //Finalmente, muestra por consola:
 
 //Nombre de cada objeto y su tipo de creación (literal, fábrica, constructor, …).
-
+console.log(`${varitaLiteral.nombre}: objeto literal`);
+console.log(`${pocionSubirVida.nombre}: función objeto`);
+console.log(`${pocionAumentaAtaque.nombre}: función objeto`);
+console.log(`${capaInvisivilidad.nombre}: constructor`);
+console.log(`${escoba.nombre}: constructor`);
+console.log(`${reliquiaAntigua.nombre}: clase `);
+console.log(`${objetoAmuleto.nombre}: Object.create`);
 //El tamaño del Set (cuántos niveles/rareza distintos hay).
+
+console.log(`Total de niveles o rareza distintos: ${unicos.size}`);
