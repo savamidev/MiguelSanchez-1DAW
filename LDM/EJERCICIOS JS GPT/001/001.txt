@@ -1,11 +1,81 @@
-1. Profundizador de Arrays
-Objetivo: Escribe una función flatten(arr) que reciba un array que puede contener elementos o sub‑arrays a cualquier profundidad, y devuelva un array “plano” con todos los valores en el orden original.
+Ejercicio A: “Lanzamiento de la App ‘FitTrack’”
+Imagina que estás montando la lógica de fondo para una app de seguimiento de hábitos saludables. Tendrás que manipular datos de usuarios, retos y logs.
+
+Array de usuarios
+
+Declara un array vacío users.
+
+Añade 6 objetos usuario con propiedades:
 
 js
 Copiar
 Editar
-flatten([1, [2, [3, 4], 5], 6]); 
-// → [1, 2, 3, 4, 5, 6]
-Pistas: Usa recursión; comprueba si cada elemento es un Array con Array.isArray().
+{ id: Number, name: String, active: Boolean }
+Imprime su longitud y muestra el primer, el medio y el último usuario.
 
-Reto extra: Hazlo sin recursión (pila manual).
+Gestión de retos
+
+Crea un array challenges con estos retos: "10k pasos", "Meditar 15 min", "Dormir 8h", "Beber 2L agua", "Leer 30 min".
+
+Imprime cada reto con forEach().
+
+Convierte cada reto a mayúsculas y vuelve a imprimirlos.
+
+Ordena alfabéticamente y después invierte el orden.
+
+Saca un sub-array con los 2 primeros retos y otro con los 2 últimos.
+
+Logs y filtrado
+
+Cada usuario tiene un array de logs de retos completados, p. ej.:
+
+js
+Copiar
+Editar
+users[0].logs = ["10k pasos", "Dormir 8h", "Beber 2L agua"];
+Sin usar filter(), crea un nuevo array superUsers con los usuarios que hayan completado al menos dos retos que contengan la letra “a”.
+
+Comprobación dinámica
+
+Escribe una función hasCompleted(userId, reto) que devuelva true/false si el usuario con id===userId ha hecho el reto.
+
+Prueba con un reto que exista y otro que no.
+
+Set de etiquetas
+
+Basándote en los nombres de retos, crea un Set tags e inserta todas las palabras individuales (p. ej. de "10k pasos": "10k", "pasos").
+
+Comprueba con has() si existe "agua" y "yoga".
+
+Elimina "10k", muestra el tamaño, y luego vacía el Set.
+
+Map de recompensas
+
+Crea un Map rewards donde la clave sea el nombre del reto y el valor un objeto { points: Number, badge: String }.
+
+Añade entradas para cada reto de challenges.
+
+Muestra el badge para "Meditar 15 min".
+
+Actualiza los puntos de "Leer 30 min" y muestra el Map completo con forEach().
+
+Borra la recompensa de "Dormir 8h" y comprueba su tamaño.
+
+Clase UserProfile
+
+Crea una clase UserProfile que reciba id, name y un array de retos completados.
+
+Métodos internos para:
+
+completeChallenge(nombre) (añade al array, sin duplicados)
+
+getCompletionRate(totalChallenges) → porcentaje
+
+resetLog() (vacía los retos completados)
+
+Instancia un par de perfiles y muestra su rate de cumplimiento asumiendo totalChallenges = challenges.length.
+
+Generador de recompensas aleatorias
+
+Escribe una función randomRewards(n) que devuelva un array de n objetos, cada uno con un id único (0–9) y value entre 50 y 100. Todos los id deben ser distintos.
+
