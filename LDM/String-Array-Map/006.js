@@ -1,6 +1,5 @@
 "use strict"
 
-
 let arraySet = new Set();
 
 addValueArray();
