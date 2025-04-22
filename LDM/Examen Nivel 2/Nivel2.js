@@ -115,7 +115,11 @@ function categoriasDisponibles(productos) {
 
 //Debe tener propiedades: nombre (string), poder (string), nivel (número).
 
-let varitaLiteral = new Object(nombre, poder, nivel);
+let varitaLiteral = {
+    nombre: "",
+    poder: "",
+    nivel: 0
+};
 
 
 
@@ -125,13 +129,13 @@ let varitaLiteral = new Object(nombre, poder, nivel);
 
 //Usa la función para generar al menos dos pociones distintas.
 
-
-
 function crearPocion(nombre, efecto, cantidad) {
-
-  return new Object(nombre, efecto, cantidad);
-
-};
+    return {
+      nombre: nombre,
+      efecto: efecto,
+      cantidad: cantidad
+    };
+  };
 
 let pocionSubirVida = crearPocion("Subir vida", "Aumenta la salud del jugador", 2); 
 let pocionAumentaAtaque = crearPocion("Explosión de ataque", "Sube las estadísticas de ataque del jugador de su arma principal", 2); 
@@ -152,13 +156,12 @@ function Artefacto(nombre, material, rareza) {
   this.nombre = nombre;
   this.material = material;
   this.rareza = rareza;
-  describir() {
-    let mensaje = `Artefacto: [${this.nombre}] (material: ${this.material}, rareza: ${this.rareza}.)`;
-    return mensaje;
+  this.describir = function() {
+    return "Artefacto: " + this.nombre +
+           " (material: " + this.material +
+           ", rareza: " + this.rareza + ")";
   };
 };
-
-
 
 let capaInvisivilidad = new Artefacto("Capa Invisividad", "Algodón con fibras mágicas", "Alta");
 
@@ -183,13 +186,16 @@ class Reliquia {
   };
 
   toString() {
-    let mensaje = `Reliquia ${this.nombre} de origen ${this.origen}, nivel mágico ${this.nivelMagico}.`;
-
-    console.log(mensaje);
-  }
+    return `Reliquia ${this.nombre} de origen ${this.origen}, nivel mágico ${this.nivelMagico}.`;
+  };
 
 };
 
+let reliquiaAntigua = new Reliquia(
+    "Corazón de Dragón",
+    "Montañas de Fuego",
+    10
+  );
 
 
 //### PARA CASA, junto con todo hecho decentemente, si te da tiempo en examen hazlo después de entregar y avisar a tu profesora:
