@@ -27,7 +27,7 @@ let productos = [
 function calcularValorInventario(productos) {
   let sumaTotal = 0;
   
-  array.forEach(item => {
+  productos.forEach(item => {
     sumaTotal += item.precio * item.cantidad;
   });
 
@@ -80,7 +80,7 @@ function descontarCategoria(productos, categoria, porcentaje) {
 
      item.precio = item.precio * (1 - (porcentaje / 100));
     };
-    
+
   });
 
   return newArray;
