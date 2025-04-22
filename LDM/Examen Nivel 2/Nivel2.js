@@ -99,13 +99,7 @@ function descontarCategoria(productos, categoria, porcentaje) {
 */
 
 function categoriasDisponibles(productos) {
-  let arraySet = new Set();
-
-  productos.forEach(producto => {
-    arraySet.add(producto.categoria);
-  });
-
-  return arraySet;
+  return new Set(productos.map(producto => producto.categoria));
 }
 
 
