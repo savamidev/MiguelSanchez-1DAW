@@ -20,18 +20,18 @@ let productos = [
 /**
  * Función devuelve la suma total de los precios por las catidades de cada producto
  * 
- * @{array} productos, array como parámetro de entrada para su manipulación
- * @{number} return, nos devuelve la suma de la cantidad de prodctos por sus precios
+ * @param {array} productos, array como parámetro de entrada para su manipulación
+ * @return {number}, nos devuelve la suma de la cantidad de prodctos por sus precios
 */
 
 function calcularValorInventario(productos) {
-  let valorTotal = Number(0);
+  let sumaTotal = 0;
   
   array.forEach(item => {
-    valorTotal += item.precio * item.cantidad;
+    sumaTotal += item.precio * item.cantidad;
   });
 
-  return (valorTotal != 0) ? valorTotal : 0;
+  return sumaTotal;
 };
 
 
@@ -41,14 +41,16 @@ function calcularValorInventario(productos) {
 /**
  * Función que transforma un array de productos en un mapa.
  * 
- * @{array} productos, conjunto de entrada por parámetros
- * 
- * Uso de .map() que nos devuelve un tipo de array según una serie de procesos.
- * @{array} mapaProductos, retorna un map con los valores de interés.
+ * @param {Array} productos
+ * @returns {Map} usando categoría como clave y precio como valor
 */
 
 function grupoPorCategoria(productos) {
-  let mapaProductos = productos.map([Clave: producto.id, Valor: producto.precio]);
+  let mapaProductos = new Map();
+  
+  productos.forEach(producto => {
+    mapaProductos.set(producto.categoria, producto.precio)
+  });
   
   return mapaProductos;
 };
@@ -63,27 +65,25 @@ function grupoPorCategoria(productos) {
  * Función que procesa un array, modificando los valores de sus precios según
  * su categoría
  * 
- * @{array} productos, conjunto de datos sobre la información de los productos
- * @{String} categoria, tipo de categiría que posee cada producto
- * @{number} porcentaje, valor de descuento que se va a aplicar a cada producto de interés
- * @{return} newArray, conjunto de datos modicados.
+ * @param {Array} productos
+ * @param {string} categoriaDesc, categoría a la que aplicar el descuento
+ * @param {number} porcentaje 
+ * @returns {Array}, nuevo array con todos los objetos (clonados)
 */
 
 function descontarCategoria(productos, categoria, porcentaje) {
-  let newArray = productos;
+  let newArray = productos.map(item => ({ ...item }));
 
   newArray.forEach(item => {
 
     if (item.categoria === categoria) {
 
      item.precio = item.precio * (1 - (porcentaje / 100));
-    
     };
-
+    
   });
 
   return newArray;
-
 };
 
 
