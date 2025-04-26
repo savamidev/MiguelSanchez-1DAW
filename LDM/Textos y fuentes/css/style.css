@@ -1,0 +1,8 @@
+:root {
+    --font-size: clamp(0.5rem, 0.8rem, 2rem);
+}
+
+
+.fs-footer {
+    font-size: var(--font-size);
+}
