@@ -1,8 +1,16 @@
 :root {
-    --font-size: clamp(0.5rem, 0.8rem, 2rem);
+    --font-size-text: clamp(0.8rem, 0.95rem, 2rem);
+    --font-size-footer: clamp(0.5rem, 0.8rem, 2rem);
 }
 
+* {
+    margin: 0px;
+}
 
-.fs-footer {
-    font-size: var(--font-size);
+.fs-text {
+    font-size: var(--font-size-text);
+}
+
+.fs-footer{
+    font-size: var(--font-size-footer);
 }
