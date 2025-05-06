@@ -1,6 +1,6 @@
 :root {
-    --font-size-text: clamp(0.8rem, 0.95rem, 2rem);
-    --font-size-footer: clamp(0.5rem, 0.8rem, 2rem);
+    --font-size-text: clamp(1.15rem, 0.95rem, 2rem);
+    --font-size-footer: clamp(1.15rem, 0.8rem, 2rem);
 }
 
 * {
