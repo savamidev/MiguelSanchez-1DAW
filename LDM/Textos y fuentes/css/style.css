@@ -22,15 +22,15 @@
   }
 
   .fs-footer {
-    font-size: 0.7rem;
+    font-size: 0.74rem;
   }
 }
 
 @media (min-width: 992px) {
   .fs-text {
-    font-size: 0.7rem;
+    font-size: 0.69rem;
   }
   .fs-footer {
-    font-size: 0.5rem;
+    font-size: 0.53rem;
   }
 }
