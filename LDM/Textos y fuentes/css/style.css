@@ -18,7 +18,7 @@
 
 @media (min-width: 768px) {
   .fs-text {
-    font-size: 0.72rem;
+    font-size: 0.66rem;
   }
 
   .fs-footer {
@@ -28,7 +28,7 @@
 
 @media (min-width: 992px) {
   .fs-text {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
   .fs-footer {
     font-size: 0.5rem;
