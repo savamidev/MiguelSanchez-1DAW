@@ -125,3 +125,48 @@ Desarrollar una aplicación web modular y escalable destinada a la gestión comp
 - **Mejora en Tiempos de Ciclo:** Preparación y envío de pedidos más rápida, con rutas de picking optimizadas. 
 
 - **Decisiones Basadas en Datos:** Informes y análisis apoyan planificación de compras y estrategias de ventas.
+
+
+---
+
+
+## 2. Objetivos del Proyecto 
+
+
+
+| **ID**   | **Objetivo SMART**                                                                 | **Tipo**     | **Métrica**                       | **Fecha Límite** | **Responsable**                | **Estado**    |
+|----------|-------------------------------------------------------------------------------------|--------------|-----------------------------------|------------------|-------------------------------|---------------|
+| OBJ-01   | Aumentar a 500 el número de posts publicados en los primeros 3 meses.               | Estratégico  | Nº de posts                       | 2025-07-28       | Product Owner                | No iniciado   |
+| OBJ-02   | Lograr un tiempo de carga de página ≤ 1 s al cargar post.                           | Táctico      | Tiempo medio de carga (segundos)  | 2025-05-31       | Equipo Frontend              | En progreso   |
+| OBJ-03   | Garantizar ≥ 99,5 % de disponibilidad del servicio.                                 | Operativo    | % de uptime mensual               | 2025-12-31       | DevOps                       | No iniciado   |
+| OBJ-04   | Conseguir una satisfacción de usuarios (CSAT) ≥ 4/5 en encuestas post-lanzamiento.  | Estratégico  | Puntuación CSAT                   | 2025-08-31       | UX / Atención al Cliente     | No iniciado   |
+
+
+---
+
+## 3. Requisitos Funcionales
+
+| **ID**  | **Descripción**                                                             | **Prioridad** | **Fuente**             | **Estado**   |
+|---------|-----------------------------------------------------------------------------|---------------|------------------------|--------------|
+| RF-01   | Registro y alta de productos con atributos                                  | Alta          | Stakeholder            | Aprobado     |
+| RF-02   | Gestión de almacenes y ubicaciones internas                                 | Alta          | Cliente                | Aprobado     |
+| RF-03   | Registrar ajustes de inventario                                             | Alta          | Stakeholder            | Propuesto    |
+| RF-04   | Mostrar niveles stock tiempo real y vista histórica de movimientos          | Alta          | Cliente                | Aprobado     |
+| RF-05   | Creación de órdenes de salida a clientes o producción                       | Alta          | Cliente                | Aprobado     |
+| RF-06   | Generación de listados de picking con rutas optimizadas                     | Media         | Stakeholder            | Aprobado     |
+| RF-07   | El usuario puede comentar en un post publicado.                             | Media         | Cliente                | Aprobado     |
+| RF-08   | El administrador puede eliminar comentarios y posts inapropiados.           | Alta          | Compliance             | Aprobado     |
+
+
+---
+
+## 4. Requisitos No Funcionales
+
+| **ID**   | **Descripción**                                                               | **Categoría**     | **Métrica**                        | **Nivel Objetivo** | **Comentarios**                          |
+|----------|-------------------------------------------------------------------------------|-------------------|------------------------------------|--------------------|-------------------------------------------|
+| RNF-01   | Tiempo de respuesta del servidor < 200 ms para CRUD de posts.                 | Rendimiento       | Latencia HTTP                      | < 200 ms           | Medir con pruebas de carga.               |
+| RNF-02   | Soportar al menos 1 000 usuarios concurrentes.                                | Escalabilidad     | Usuarios concurrentes              | ≥ 1 000            | Autoescalado en la nube.                  |
+| RNF-03   | Cumplir HTTPS/TLS para todas las comunicaciones.                              | Seguridad         | Cifrado                            | TLS 1.2+ obligatorio | Auditoría de seguridad trimestral.        |
+| RNF-04   | Cumplir WCAG 2.1 AA en la interfaz de usuario.                                | Usabilidad        | Puntuación auditoría accesible     | Nivel AA           | Auditoría externa antes del go-live.      |
+| RNF-05   | Disponibilidad ≥ 99,5 % mensual.                                              | Disponibilidad    | % Uptime                           | ≥ 99,5 %           | Monitorización 24/7 con alertas.          |
+| RNF-06   | Tiempo de carga de la página inicial ≤ 1 s.                                   | Rendimiento       | Tiempo de carga                    | ≤ 1 s              | Uso de CDN y optimización de assets.      |
