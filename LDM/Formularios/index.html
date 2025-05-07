@@ -14,8 +14,8 @@
       </header>
       <main>
         <form class="row g-3 needs-validation" novalidate>
-          <div class="mb-3">
-            <label id="full_name_label" for="full_name">Nombre completo*</label>
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
+            <label id="full_name_label" for="full_name">Nombre completo *</label>
             <input
               id="full_name"
               name="full_name"
@@ -28,8 +28,8 @@
               Por favor ingresa al menos 3 carácteres.
             </div>
           </div>
-          <div class="mb-3">
-            <label id="email_label" for="email">Email*</label>
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
+            <label id="email_label" for="email">Email *</label>
             <input
               id="email"
               name="email"
@@ -42,8 +42,8 @@
             </div>
           </div>
 
-          <div class="mb-3">
-            <label id="password_label" for="pass">Contraseña*</label>
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
+            <label id="password_label" for="pass">Contraseña *</label>
             <input
               id="pass"
               name="password"
@@ -56,9 +56,9 @@
               Debe tener al menos 8 carácteres.
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
             <label id="password2_label" for="pass2"
-              >Confirmar contraseña*</label
+              >Confirmar contraseña *</label
             >
             <input
               id="pass2"
@@ -69,8 +69,8 @@
             />
             <div class="invalid-feedback">Las contraseñas deben coincidir.</div>
           </div>
-          <div class="mb-3">
-            <label for="age">Edad</label>
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
+            <label for="age">Edad *</label>
             <input
               type="number"
               name="age"
@@ -82,8 +82,8 @@
             />
             <div class="invalid-feedback">Debes tener entre 18 y 120 años.</div>
           </div>
-          <div class="mb-3">
-            <label for="date">Fecha de nacimiento</label>
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
+            <label for="date">Fecha de nacimiento *</label>
             <input
               type="date"
               name="date"
@@ -95,7 +95,7 @@
               Selecciona tu fecha de nacimiento.
             </div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
             <label id="phone_label" for="phone">Teléfono</label>
             <input
               id="phone"
@@ -105,11 +105,11 @@
               pattern="^(6|7)[0-9]{8}$"
             />
           </div>
-          <div class="mb-3">
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
             <label for="url">Sitio web</label>
-            <input type="url" name="url" id="url" class="form-control" />
+            <input type="url" name="url" id="url" class="form-control mt-2" />
           </div>
-          <div class="mb-3">
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
             <label for="color">Color favorito</label>
             <input
               type="color"
@@ -118,7 +118,7 @@
               class="form-control form-control-color mt-2"
             />
           </div>
-          <fieldset id="genderGroup" class="mb-3">
+          <fieldset id="genderGroup" class="mb-3 col-12 col-sm-12 col-md-4">
             <label class="form-label">Género *</label>
 
             <div class="form-check">
@@ -158,7 +158,7 @@
               <div class="invalid-feedback mx-0">Selecciona una opción.</div>
             </div>
           </fieldset>
-          <fieldset id="hobbyGroup" class="mb-3">
+          <fieldset id="hobbyGroup" class="mb-3 col-12 col-sm-12 col-md-4">
             <label class="form-label">Hobbies *</label>
             <div class="form-check">
               <input
@@ -192,7 +192,7 @@
               <div class="invalid-feedback">Marca al menos un hobby.</div>
             </div>
           </fieldset>
-          <div class="mb-3">
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
             <label for="selectCountry">País *</label>
             <select
               id="selectCountry"
@@ -211,7 +211,7 @@
             </select>
             <div class="invalid-feedback">Elige un país.</div>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 col-12 col-sm-12 col-md-12">
             <label for="biografia" class="form-label">Biografía</label>
             <textarea
               class="form-control"
@@ -219,8 +219,9 @@
               rows="3"
               maxlength="500"
             ></textarea>
+            <label for="biografia" class="text-muted">Máx. 500 carateres.</label>
           </div>
-          <div class="mb-3">
+          <div class="mb-3 col-12 col-sm-12 col-md-4">
             <label for="salary" class="form-label">
               Salario aspiracional:
             </label>
@@ -236,7 +237,8 @@
               <small>1000 €</small>
               <small>10000 €</small>
             </div>
-            <div class="mb-3">
+          </div>
+            <div class="mb-3 col-12 col-sm-12 col-md-4">
               <label for="cv">CV (PDF) *</label>
               <input
                 type="file"
@@ -248,7 +250,7 @@
               />
               <div class="invalid-feedback">Sube tu CV en formato PDF.</div>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 col-12 col-sm-12 col-md-12">
               <button class="btn btn-primary mt-2" type="submit">Enviar</button>
             </div>
           </div>
