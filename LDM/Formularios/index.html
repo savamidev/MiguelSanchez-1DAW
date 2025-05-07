@@ -10,22 +10,30 @@
   <body>
     <div class="container">
       <header>
-        <h1>Registro de usuario</h1>
+        <p class="display-5 py-3 fw-normal">Registro de usuario</p>
       </header>
       <main>
-        <form action="">
+        <form class="row g-3 needs-validation" novalidate>
           <div class="mb-3">
             <label id="full_name_label" for="full_name">Nombre completo*</label>
             <input
               id="full_name"
               name="full_name"
               type="text"
-              class="form-control"
+              class="form-control mt-2"
+              required
+              minlength="3"
             />
           </div>
           <div class="mb-3">
             <label id="email_label" for="email">Email*</label>
-            <input id="email" name="email" type="email" class="form-control" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-control mt-2"
+              required
+            />
           </div>
 
           <div class="mb-3">
@@ -34,7 +42,9 @@
               id="pass"
               name="password"
               type="password"
-              class="form-control"
+              class="form-control mt-2"
+              required
+              minlength="8"
             />
           </div>
           <div class="mb-3">
@@ -45,29 +55,213 @@
               id="pass2"
               name="password"
               type="password"
-              class="form-control"
+              class="form-control mt-2"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="age">Edad</label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+              class="form-control mt-2"
+              required
+              min="18"
+              max="120"
             />
           </div>
           <div class="mb-3">
             <label for="date">Fecha de nacimiento</label>
-            <input type="date" name="date" id="date" class="form-control" />
+            <input
+              type="date"
+              name="date"
+              id="date"
+              class="form-control mt-2"
+              required
+            />
           </div>
           <div class="mb-3">
             <label id="phone_label" for="phone">Teléfono</label>
-            <input id="phone" name="phone" type="tel" class="form-control" />
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              class="form-control mt-2"
+              pattern="^(6|7)[0-9]{8}$"
+            />
           </div>
-          <div class="mg-3">
+          <div class="mb-3">
             <label for="url">Sitio web</label>
             <input type="url" name="url" id="url" class="form-control" />
           </div>
           <div class="mb-3">
             <label for="color">Color favorito</label>
-            <input type="color" name="color" id="color" class="form-control" />
+            <input
+              type="color"
+              name="color"
+              id="color"
+              class="form-control form-control-color mt-2"
+            />
           </div>
-          radio
+          <div id="genderGroup" class="mb-3">
+            <label class="form-label">Género *</label>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="generoHombre"
+                value="Hombre"
+              />
+              <label class="form-check-label" for="generoHombre">Hombre</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="generoMujer"
+                value="Mujer"
+              />
+              <label class="form-check-label" for="generoMujer">Mujer</label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="generoOtro"
+                value="Otro"
+              />
+              <label class="form-check-label" for="generoOtro">Otro</label>
+            </div>
+
+            <div class="invalid-feedback">Selecciona una opción.</div>
+          </div>
+          <div id="hobbyGroup" class="mb-3">
+            <label class="form-label">Hobbies *</label>
+            <div class="form-check">
+              <input
+                class="form-check-input hobby-checkbox"
+                type="checkbox"
+                id="hobbyLectura"
+                value="Lectura"
+              />
+              <label class="form-check-label" for="hobbyLectura">Lectura</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input hobby-checkbox"
+                type="checkbox"
+                id="hobbyDeporte"
+                value="Deporte"
+              />
+              <label class="form-check-label" for="hobbyDeporte">Deporte</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input hobby-checkbox"
+                type="checkbox"
+                id="hobbyMusica"
+                value="Música"
+              />
+              <label class="form-check-label" for="hobbyMusica">Música</label>
+            </div>
+            <div class="invalid-feedback">Marca al menos un hobby.</div>
+          </div>
+          <div class="mb-3">
+            <label for="selectCountry">País *</label>
+            <select
+              class="form-select mt-2"
+              aria-label="Default select example"
+              required
+            >
+              <option selected>Selecciona tu país</option>
+              <option value="1">España</option>
+              <option value="2">Japón</option>
+              <option value="3">Estados Unidos</option>
+              <option value="4">Australia</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="biografia" class="form-label">Biografía</label>
+            <textarea
+              class="form-control"
+              id="biografia"
+              rows="3"
+              maxlength="500"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="salary" class="form-label">
+              Salario aspiracional:
+            </label>
+            <input
+              type="range"
+              class="form-range"
+              min="1000"
+              max="10000"
+              step="500"
+              id="salary"
+            />
+            <div class="d-flex justify-content-between mb-3 text-muted">
+              <small>1000 €</small>
+              <small>10000 €</small>
+            </div>
+            <div class="mb-3">
+              <label for="cv">CV (PDF) *</label>
+              <input type="file" class="form-control mt-2" id="cv" aria-label="file example" required accept=".pdf">
+              <div class="invalid-feedback">sube tu CV en formato PDF.</div>
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-primary mt-2" type="submit">Enviar</button>
+            </div>
+          </div>
         </form>
       </main>
       <footer></footer>
     </div>
+    <!-- Script de validación de Bootstrap con modificaciones de Olga, no tocar salvo los ids-->
+    <script>
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              // Validar hobbies manualmente
+              const checkboxes = form.querySelectorAll(".hobby:checked"); //id de los hobbies
+              if (checkboxes.length === 0) {
+                event.preventDefault();
+                event.stopPropagation();
+                form
+                  .querySelector(".hobby")
+                  .closest("fieldset")
+                  .classList.add("is-invalid");
+              }
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              // Validar coincidencia de contraseñas
+              const pass = form.querySelector("#pass").value; // id contraseña 1
+              const pass2 = form.querySelector("#pass2").value; // id contraseña 2
+              if (pass !== pass2) {
+                event.preventDefault();
+                event.stopPropagation();
+                form.querySelector("#pass2").classList.add("is-invalid");
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
