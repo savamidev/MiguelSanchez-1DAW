@@ -24,6 +24,9 @@
               required
               minlength="3"
             />
+            <div class="invalid-feedback">
+              Por favor ingresa al menos 3 carácteres.
+            </div>
           </div>
           <div class="mb-3">
             <label id="email_label" for="email">Email*</label>
@@ -34,10 +37,13 @@
               class="form-control mt-2"
               required
             />
+            <div class="invalid-feedback">
+              Introduce una dirección de correo válida.
+            </div>
           </div>
 
           <div class="mb-3">
-            <label id="password_label" for="password">Contraseña*</label>
+            <label id="password_label" for="pass">Contraseña*</label>
             <input
               id="pass"
               name="password"
@@ -46,9 +52,12 @@
               required
               minlength="8"
             />
+            <div class="invalid-feedback">
+              Debe tener al menos 8 carácteres.
+            </div>
           </div>
           <div class="mb-3">
-            <label id="password_label" for="password"
+            <label id="password2_label" for="pass2"
               >Confirmar contraseña*</label
             >
             <input
@@ -58,6 +67,7 @@
               class="form-control mt-2"
               required
             />
+            <div class="invalid-feedback">Las contraseñas deben coincidir.</div>
           </div>
           <div class="mb-3">
             <label for="age">Edad</label>
@@ -70,6 +80,7 @@
               min="18"
               max="120"
             />
+            <div class="invalid-feedback">Debes tener entre 18 y 120 años.</div>
           </div>
           <div class="mb-3">
             <label for="date">Fecha de nacimiento</label>
@@ -80,6 +91,9 @@
               class="form-control mt-2"
               required
             />
+            <div class="invalid-feedback">
+              Selecciona tu fecha de nacimiento.
+            </div>
           </div>
           <div class="mb-3">
             <label id="phone_label" for="phone">Teléfono</label>
@@ -104,7 +118,7 @@
               class="form-control form-control-color mt-2"
             />
           </div>
-          <div id="genderGroup" class="mb-3">
+          <fieldset id="genderGroup" class="mb-3">
             <label class="form-label">Género *</label>
 
             <div class="form-check">
@@ -114,6 +128,7 @@
                 name="gender"
                 id="generoHombre"
                 value="Hombre"
+                required
               />
               <label class="form-check-label" for="generoHombre">Hombre</label>
             </div>
@@ -125,6 +140,7 @@
                 name="gender"
                 id="generoMujer"
                 value="Mujer"
+                required
               />
               <label class="form-check-label" for="generoMujer">Mujer</label>
             </div>
@@ -136,56 +152,64 @@
                 name="gender"
                 id="generoOtro"
                 value="Otro"
+                required
               />
               <label class="form-check-label" for="generoOtro">Otro</label>
+              <div class="invalid-feedback mx-0">Selecciona una opción.</div>
             </div>
-
-            <div class="invalid-feedback">Selecciona una opción.</div>
-          </div>
-          <div id="hobbyGroup" class="mb-3">
+          </fieldset>
+          <fieldset id="hobbyGroup" class="mb-3">
             <label class="form-label">Hobbies *</label>
             <div class="form-check">
               <input
-                class="form-check-input hobby-checkbox"
+                class="form-check-input hobby-checkbox hobby"
                 type="checkbox"
                 id="hobbyLectura"
                 value="Lectura"
+                required
               />
               <label class="form-check-label" for="hobbyLectura">Lectura</label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input hobby-checkbox"
+                class="form-check-input hobby-checkbox hobby"
                 type="checkbox"
                 id="hobbyDeporte"
                 value="Deporte"
+                required
               />
               <label class="form-check-label" for="hobbyDeporte">Deporte</label>
             </div>
             <div class="form-check">
               <input
-                class="form-check-input hobby-checkbox"
+                class="form-check-input hobby-checkbox hobby"
                 type="checkbox"
                 id="hobbyMusica"
                 value="Música"
+                required
               />
               <label class="form-check-label" for="hobbyMusica">Música</label>
+              <div class="invalid-feedback">Marca al menos un hobby.</div>
             </div>
-            <div class="invalid-feedback">Marca al menos un hobby.</div>
-          </div>
+          </fieldset>
           <div class="mb-3">
             <label for="selectCountry">País *</label>
             <select
+              id="selectCountry"
+              name="country"
               class="form-select mt-2"
-              aria-label="Default select example"
+              aria-label="selectCountry"
               required
             >
-              <option selected>Selecciona tu país</option>
+              <option value="" selected disabled hidden>
+                Selecciona tu país
+              </option>
               <option value="1">España</option>
               <option value="2">Japón</option>
               <option value="3">Estados Unidos</option>
               <option value="4">Australia</option>
             </select>
+            <div class="invalid-feedback">Elige un país.</div>
           </div>
           <div class="mb-3">
             <label for="biografia" class="form-label">Biografía</label>
@@ -214,8 +238,15 @@
             </div>
             <div class="mb-3">
               <label for="cv">CV (PDF) *</label>
-              <input type="file" class="form-control mt-2" id="cv" aria-label="file example" required accept=".pdf">
-              <div class="invalid-feedback">sube tu CV en formato PDF.</div>
+              <input
+                type="file"
+                class="form-control mt-2"
+                id="cv"
+                aria-label="file example"
+                required
+                accept=".pdf"
+              />
+              <div class="invalid-feedback">Sube tu CV en formato PDF.</div>
             </div>
             <div class="mb-3">
               <button class="btn btn-primary mt-2" type="submit">Enviar</button>
